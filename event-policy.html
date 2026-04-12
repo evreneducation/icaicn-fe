@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Event Policies - ICAICN 2026</title>
+	<meta name="description"
+		content="Event Policies for ICAICN 2026 - Guidelines and policies for conference participation, registration, and conduct.">
+	<meta property="og:image" content="assets/img/sponsors_logo/3.png" />
+	<meta property="og:title" content="Event Policies - ICAICN 2026" />
+	<meta property="og:description"
+		content="Event Policies for ICAICN 2026 - Guidelines and policies for conference participation, registration, and conduct." />
+	<meta property="og:url" content="https://www.icaicn.traveon.inveon.in/event-policy.html" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Event Policies - ICAICN 2026" />
+	<meta name="twitter:description"
+		content="Event Policies for ICAICN 2026 - Guidelines and policies for conference participation, registration, and conduct." />
+	<meta name="twitter:image" content="assets/img/sponsors_logo/3.png" />
+
+	<!--===== FAV ICON =======-->
+	<link rel="shortcut icon" href="assets/img/sponsors_logo/favicon.png" />
+
+	<!--===== CSS =======-->
+	<link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/vendor/aos.css" />
+	<link rel="stylesheet" href="assets/css/vendor/fontawesome.css" />
+	<link rel="stylesheet" href="assets/css/vendor/magnific-popup.css" />
+	<link rel="stylesheet" href="assets/css/vendor/mobile.css" />
+	<link rel="stylesheet" href="assets/css/vendor/owlcarousel.min.css" />
+	<link rel="stylesheet" href="assets/css/vendor/sidebar.css" />
+	<link rel="stylesheet" href="assets/css/vendor/slick-slider.css" />
+	<link rel="stylesheet" href="assets/css/vendor/nice-select.css" />
+	<link rel="stylesheet" href="assets/css/vendor/odometer.css" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+
+	<style>
+		/* ===== THEME TOKENS (match contact.html) ===== */
+		:root {
+			--accent: #019087;
+			--accent-2: #07a59d;
+			--text: #27303f;
+			--muted: #495057;
+			--border: #dbe7e7;
+			--soft-bg: #f7fbfb;
+			--card: #ffffff;
+			--radius: 14px;
+			--shadow: 0 12px 28px rgba(0, 0, 0, .08);
+			--shadow-hover: 0 16px 34px rgba(0, 0, 0, .12);
+		}
+
+		body {
+			color: var(--text);
+		}
+
+		/* ===== PAGE ===== */
+		.policy-section {
+			padding: 80px 0;
+			background: var(--soft-bg);
+		}
+
+		.policy-container {
+			max-width: 900px;
+			margin: 0 auto;
+			background: var(--card);
+			border-radius: 20px;
+			box-shadow: var(--shadow);
+			overflow: hidden;
+			border: 1px solid var(--border);
+		}
+
+		/* Header band re-themed to teal (like contact hero) */
+		.policy-header {
+			background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+			color: #fff;
+			padding: 56px 40px;
+			text-align: center;
+			position: relative;
+			border-bottom: 3px solid rgba(255, 255, 255, .18);
+		}
+
+		.policy-header::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: url('assets/img/bg/header-bg1.png') center/cover no-repeat;
+			opacity: .08;
+			pointer-events: none;
+		}
+
+		.policy-header h1 {
+			font-size: 2.6rem;
+			font-weight: 800;
+			margin: 0 0 12px;
+			letter-spacing: .3px;
+			position: relative;
+			z-index: 1;
+			text-transform: none;
+		}
+
+		.policy-header p {
+			font-size: 1.05rem;
+			opacity: .95;
+			position: relative;
+			z-index: 1;
+			margin: 0;
+		}
+
+		.policy-content {
+			padding: 40px;
+		}
+
+		.policy-intro {
+			background: #ffffff;
+			padding: 22px 24px;
+			border-radius: var(--radius);
+			margin-bottom: 28px;
+			border: 1px solid var(--border);
+		}
+
+		.policy-intro p {
+			font-size: 1.05rem;
+			line-height: 1.75;
+			margin: 0;
+			color: var(--muted);
+		}
+
+		.policy-item {
+			margin-bottom: 18px;
+			padding: 20px 22px;
+			border-radius: var(--radius);
+			background: var(--card);
+			border: 1px solid var(--border);
+			transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+		}
+
+		.policy-item:hover {
+			transform: translateY(-3px);
+			box-shadow: var(--shadow-hover);
+			border-color: var(--accent);
+		}
+
+		.policy-item h3 {
+			color: var(--accent);
+			font-size: 1.25rem;
+			font-weight: 700;
+			margin: 0 0 12px;
+			display: flex;
+			align-items: center;
+			letter-spacing: .2px;
+		}
+
+		.policy-item h3::before {
+			content: '';
+			width: 28px;
+			height: 3px;
+			background: var(--accent);
+			margin-right: 12px;
+			border-radius: 2px;
+		}
+
+		.policy-item ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.policy-item li {
+			padding: 10px 0 10px 26px;
+			border-bottom: 1px solid #eef6f6;
+			position: relative;
+			font-size: 1rem;
+			line-height: 1.55;
+			color: var(--muted);
+		}
+
+		.policy-item li:last-child {
+			border-bottom: none;
+		}
+
+		.policy-item li::before {
+			content: '•';
+			color: var(--accent);
+			font-weight: 800;
+			font-size: 1.1rem;
+			position: absolute;
+			left: 8px;
+			top: 8px;
+		}
+
+		.policy-footer {
+			background: #ffffff;
+			padding: 28px 32px;
+			text-align: center;
+			border-top: 1px solid var(--border);
+		}
+
+		.policy-footer p {
+			font-size: 1.05rem;
+			color: var(--muted);
+			margin-bottom: 10px;
+		}
+
+		.policy-footer .highlight {
+			color: var(--accent);
+			font-weight: 700;
+		}
+
+		/* Back-to-top button */
+		#backToTop {
+			position: fixed;
+			bottom: 28px;
+			right: 28px;
+			width: 52px;
+			height: 52px;
+			background: var(--accent);
+			color: #fff;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none;
+			box-shadow: var(--shadow);
+			transition: all .25s ease;
+			z-index: 1000;
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		#backToTop.show {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		#backToTop:hover {
+			background: var(--accent-2);
+			transform: translateY(-3px);
+			color: #fff;
+		}
+
+		#backToTop i {
+			font-size: 18px;
+		}
+
+		/* Reveal-on-scroll */
+		.animate-fade-in {
+			opacity: 0;
+			transform: translateY(24px);
+			transition: all .6s ease;
+		}
+
+		.animate-fade-in.visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		/* Mobile */
+		@media (max-width: 768px) {
+			.policy-header {
+				padding: 40px 18px;
+			}
+
+			.policy-header h1 {
+				font-size: 2rem;
+			}
+
+			.policy-content {
+				padding: 24px 18px;
+			}
+
+			.policy-item {
+				padding: 18px;
+			}
+
+			.policy-item h3 {
+				font-size: 1.15rem;
+			}
+
+			.policy-intro {
+				padding: 18px;
+			}
+		}
+	</style>
+
+	<!--===== JS (early jQuery for any vendor that expects it) =======-->
+	<script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+</head>
+
+<body class="homepage4-body">
+	<!--===== PAGE PROGRESS START=======-->
+	<div class="paginacontainer">
+		<div class="progress-wrap">
+			<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+				<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+			</svg>
+		</div>
+	</div>
+	<!--===== PAGE PROGRESS END=======-->
+
+	<!--===== HEADER START =======-->
+	<header>
+		<div class="header-area homepage4 header header-sticky d-none d-lg-block" id="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="header-elements">
+							<a href="index.html">
+								<div class="site-logo">
+									<img src="assets/img/sponsors_logo/new_logo.jpg" alt="logo">
+								</div>
+							</a>
+							<div class="main-menu">
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li>
+										<a href="#">Conference <i class="fa-solid fa-angle-down"></i></a>
+										<ul class="dropdown-padding">
+											<li><a href="about.html">About Conference</a></li>
+											<li><a href="paper.html">Submit Your Papers</a></li>
+											<li><a href="agenda.html">Conference Agenda</a></li>
+											<!-- <li><a href="keynote-speaker-register.html">Keynote Speaker Registration</a></li> -->
+											<li><a href="reviewer-expression.html">Reviewer Expression</a></li>
+											<li><a href="faq.html">FAQs</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Speakers <i class="fa-solid fa-angle-down"></i></a>
+										<ul class="dropdown-padding">
+											<li><a href="keynote-speakers.html">Keynote Speakers</a></li>
+											<li><a href="keynote-speaker-register.html">Keynote Speaker Registration</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="register.html">Register</a></li>
+									<li><a href="sponsors.html">Exhibitors</a></li>
+									<li><a href="venue.html">Venue</a></li>
+									<li><a href="contact.html">Contact Us</a></li>
+								</ul>
+							</div>
+							<div class="body-overlay"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--===== HEADER END =======-->
+
+	<!--===== MOBILE HEADER START =======-->
+	<div class="mobile-header mobile-haeder4 d-block d-lg-none">
+		<div class="container-fluid">
+			<div class="col-12">
+				<div class="mobile-header-elements">
+					<a href="index.html">
+						<div class="site-logo" style="width: 150px;">
+							<img src="assets/img/sponsors_logo/new_logo.jpg" alt="logo">
+						</div>
+					</a>
+					<div class="mobile-nav-icon dots-menu">
+						<i class="fa-solid fa-bars-staggered"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="mobile-sidebar mobile-sidebar4">
+		<div class="logosicon-area">
+			<a href="index.html">
+				<div class="site-logo" style="width: 150px;">
+					<img src="assets/img/sponsors_logo/new_logo.jpg" alt="logo">
+				</div>
+			</a>
+			<div class="menu-close">
+				<i class="fa-solid fa-xmark"></i>
+			</div>
+		</div>
+		<div class="mobile-nav mobile-nav1">
+			<ul class="mobile-nav-list nav-list1">
+				<li><a href="index.html">Home</a></li>
+				<li>
+					<a href="#">Conference <i class="fa-solid fa-angle-down"></i></a>
+					<ul class="dropdown-padding">
+						<li><a href="about.html">About Conference</a></li>
+						<li><a href="paper.html">Submit Your Papers</a></li>
+						<li><a href="agenda.html">Conference Agenda</a></li>
+						<!-- <li><a href="keynote-speaker-register.html">Keynote Speaker Registration</a></li> -->
+						<li><a href="reviewer-expression.html">Reviewer Expression</a></li>
+						<li><a href="faq.html">FAQs</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Speakers <i class="fa-solid fa-angle-down"></i></a>
+					<ul class="dropdown-padding">
+						<li><a href="keynote-speakers.html">Keynote Speakers</a></li>
+						<li><a href="keynote-speaker-register.html">Keynote Speaker Registration</a></li>
+					</ul>
+				</li>
+				<li><a href="register.html">Register</a></li>
+				<li><a href="sponsors.html">Exhibitors</a></li>
+				<li><a href="venue.html">Venue</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+			<div class="allmobilesection">
+				<a class="vl-btn4" href="contact.html"><span class="demo">Contact Us</span></a>
+				<div class="single-footer">
+					<h3>Contact Info</h3>
+					<div class="footer1-contact-info">
+						<div class="contact-info-single">
+							<div class="contact-info-icon">
+								<span><i class="fa-solid fa-phone-volume"></i></span>
+							</div>
+							<div class="contact-info-text">
+								<a href="tel:9540111207">+91-9540111312</a>
+							</div>
+						</div>
+						<div class="contact-info-single">
+							<div class="contact-info-icon">
+								<span><i class="fa-solid fa-envelope"></i></span>
+							</div>
+							<div class="contact-info-text">
+								<a href="mailto:info@iccict.org">icaicn.traveon@gmail.com</a>
+							</div>
+						</div>
+						<div class="single-footer">
+							<h3>Our Location</h3>
+							<div class="contact-info-single">
+								<div class="contact-info-icon">
+									<span><i class="fa-solid fa-location-dot"></i></span>
+								</div>
+								<div class="contact-info-text">
+									<a href="" target="_blank">New Delhi, India</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- /.allmobilesection -->
+		</div>
+	</div>
+	<!--===== MOBILE HEADER END =======-->
+
+	<!--===== EVENT POLICIES SECTION =======-->
+	<section class="policy-section">
+		<div class="container">
+			<div class="policy-container">
+				<div class="policy-header">
+					<h1>EVENT POLICIES</h1>
+					<p>ICAICN 2026 — Guidelines for Conference Participation and Conduct</p>
+				</div>
+
+				<div class="policy-content">
+					<div class="policy-intro animate-fade-in">
+						<p><strong>ICAICN 2026</strong> is committed to providing a seamless, professional, and
+							inclusive
+							conference experience. To ensure the smooth execution of the event, all participants must
+							adhere to the
+							following policies:</p>
+					</div>
+
+					<div class="policy-item animate-fade-in">
+						<h3>1. Registration &amp; Access</h3>
+						<ul>
+							<li>All attendees must complete the official registration process before accessing the
+								event.</li>
+							<li>Badges must be worn at all times for security and identification purposes.</li>
+						</ul>
+					</div>
+
+					<div class="policy-item animate-fade-in">
+						<h3>2. Attendance &amp; Participation</h3>
+						<ul>
+							<li>Sessions, workshops, and networking events must be attended punctually.</li>
+							<li>Unauthorized distribution of promotional materials is not permitted.</li>
+						</ul>
+					</div>
+
+					<div class="policy-item animate-fade-in">
+						<h3>3. Content &amp; Recording</h3>
+						<ul>
+							<li>Unauthorized recording, live streaming, or distribution of event content is prohibited.
+							</li>
+							<li>Speakers and presenters must obtain consent before sharing any confidential or sensitive
+								information.</li>
+						</ul>
+					</div>
+
+					<div class="policy-item animate-fade-in">
+						<h3>4. Health &amp; Safety</h3>
+						<ul>
+							<li>Attendees must comply with all venue safety regulations and emergency protocols.</li>
+							<li>Any health concerns should be reported to the event organizers or venue personnel
+								immediately.</li>
+						</ul>
+					</div>
+
+					<div class="policy-item animate-fade-in">
+						<h3>5. Cancellation &amp; Refunds</h3>
+						<ul>
+							<li>Registration fees are non-refundable, except under special circumstances outlined in our
+								Cancellation
+								Policy.</li>
+							<li>Sponsorship and exhibitor agreements are subject to individual contractual terms.</li>
+						</ul>
+					</div>
+
+					<div class="policy-item animate-fade-in">
+						<h3>6. Compliance with Venue Rules</h3>
+						<ul>
+							<li>All attendees must respect the venue's regulations, including property protection and
+								waste
+								disposal.</li>
+							<li>Any damage caused to the venue by an attendee will be their sole responsibility.</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="policy-footer">
+					<p>By participating in <strong>ICAICN 2026</strong>, you agree to comply with these event policies,
+						ensuring a
+						smooth and enjoyable experience for all.</p>
+					<p class="highlight">
+						<i class="fa-solid fa-diamond" style="color:#019087;margin-right:.35ch;" aria-hidden="true"></i>
+						Thank you for your cooperation in making this conference a success!
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--===== EVENT POLICIES END =======-->
+
+	<!--===== FOOTER START =======-->
+	<div class="footer4-sertion-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-logo-area">
+						<a href="index.html">
+							<div class="site-logo">
+								<img src="assets/img/sponsors_logo/footer_logo.png" alt="logo">
+							</div>
+						</a>
+						<div class="space16"></div>
+						<p>We are committed to provide the Intersection ofAI & Communication Networks.</p>
+						<div class="space24"></div>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-6">
+					<div class="link-content">
+						<h3>Quick Links</h3>
+						<ul>
+							<li><a href="about.html">Conference</a></li>
+							<li><a href="features.html">Features</a></li>
+							<!-- <li><a href="sponsors.html">Events</a></li> -->
+							<li><a href="register.html">Register</a></li>
+							<li><a href="sponsors.html">Exhibitors</a></li>
+							<li><a href="venue.html">Venue</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-6">
+					<div class="link-content2">
+						<h3>Contact Us</h3>
+						<ul>
+							<li>
+								<a href="tel:+91-9540111312" target="_blank" style="display: flex;">
+									<img src="assets/img/icons/phn1.svg" alt="" />
+									<div class="">
+										<span>+91-9540111312</span> <br>
+										<span style="margin-right: 10px;"></span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#" target="_blank"><img src="assets/img/icons/location1.svg" alt="" /> New Delhi, India (To be Confirmed)
+								</a>
+							</li>
+							<li>
+								<a href="mailto:icaicn.traveon@gmail.com" target="_blank"><img src="assets/img/icons/mail1.svg"
+									alt="" />icaicn.traveon@gmail.com</a>
+							</li>
+							<li>
+								<a href="https://www.icaicn.traveon.in" target="_blank"><img src="assets/img/icons/world1.svg"
+										alt="" />www.icaicn.traveon.in</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="footer-social-box">
+						<h3>Delhi Visuals</h3>
+						<div class="space12"></div>
+						<div class="row">
+							<div class="col-lg-4 col-md-4 col-4">
+								<div class="img1">
+									<img src="https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/5c/4e/0f/32/85/v1_E10/E1083AGJ.jpg?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=2a62dc0e9272c0049ae3d399b9c9119e9626da28e094da96ba935c51bc9c60f0"
+										alt="" />
+									<div class="icons">
+										<a href="https://www.instagram.com/traveonventures/"><i
+												class="fa-brands fa-instagram"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-4">
+								<div class="img1">
+									<img src="https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/7e/eb/3f/ba/a2/v1_E10/E108358M.jpg?w=800&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=f5b35f8a53b76692bd33d3e26008d72b4a62cfb13b903a09a14aa19622df4280"
+										alt="" />
+									<div class="icons">
+										<a href="https://www.instagram.com/traveonventures/"><i
+												class="fa-brands fa-instagram"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-4">
+								<div class="img1">
+									<img src="https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/b6/c5/7e/f1/f8/v1_E10/E10835U2.jpg?w=800&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=e6d5d06edd17ec76bd0a3f16ebf22f42e07c8b8f3f77acaa6685dc6ec307bcbe"
+										alt="" />
+									<div class="icons">
+										<a href="https://www.instagram.com/traveonventures/"><i
+												class="fa-brands fa-instagram"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-4">
+								<div class="img1">
+									<img src="https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/84/9c/3b/51/8a/v1_E10/E105F746.jpg?w=800&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=4dc9dc164068c6bcc788ce158af74a39f2210e817a6f3ce1929eb48c57699c40"
+										alt="" />
+									<div class="icons">
+										<a href="https://www.instagram.com/traveonventures/"><i
+												class="fa-brands fa-instagram"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-4">
+								<div class="img1">
+									<img src="https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/10/dd/45/fa/16/v1_E11/E117X489.jpg?w=800&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=72b33c526abc7260a13e96688eb11c017ca177eb1002b640a960a75e6bf113a2"
+										alt="" />
+									<div class="icons">
+										<a href="https://www.instagram.com/traveonventures/"><i
+												class="fa-brands fa-instagram"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4 col-4">
+								<div class="img1">
+									<img src="https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/8c/8f/76/2a/09/v1_E10/E10A3UWF.jpg?w=800&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=30938da8db9b9445a61f45e5e367981c009ebff386a0530dd506a930dcbae460" alt="" />
+									<div class="icons">
+										<a href="https://www.instagram.com/traveonventures/"><i
+												class="fa-brands fa-instagram"></i></a>
+									</div>
+								</div>
+							</div>
+						</div><!-- /.row -->
+					</div>
+				</div>
+			</div>
+			<div class="space60"></div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="copyright">
+						<p>&copy; Copyright 2026 - Traveon Ventures LLP. All Right Reserved</p>
+					</div>
+					<div class="privacy" style="display: flex; justify-content: end; gap: 20px;">
+						<a href="event-policy.html">Event Policies</a> |
+						<a href="code-of-conduct.html">Code Of Conduct</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--===== FOOTER END =======-->
+
+	<!--===== JS =======-->
+	<script src="assets/js/vendor/bootstrap.min.js"></script>
+	<script src="assets/js/vendor/fontawesome.js"></script>
+	<script src="assets/js/vendor/aos.js"></script>
+	<script src="assets/js/vendor/jquery.appear.js"></script>
+	<script src="assets/js/vendor/jquery.odometer.min.js"></script>
+	<script src="assets/js/vendor/sidebar.js"></script>
+	<script src="assets/js/vendor/magnific-popup.js"></script>
+	<script src="assets/js/vendor/gsap.min.js"></script>
+	<script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+	<script src="assets/js/vendor/Splitetext.js"></script>
+	<script src="assets/js/vendor/mobilemenu.js"></script>
+	<script src="assets/js/vendor/owlcarousel.min.js"></script>
+	<script src="assets/js/vendor/nice-select.js"></script>
+	<script src="assets/js/vendor/waypoints.js"></script>
+	<script src="assets/js/vendor/slick-slider.js"></script>
+	<script src="assets/js/vendor/circle-progress.js"></script>
+	<script src="assets/js/main.js"></script>
+
+	<script>
+		(function () {
+			function handleScroll() {
+				const sections = document.querySelectorAll('.animate-fade-in');
+				const winH = window.innerHeight || document.documentElement.clientHeight;
+				sections.forEach(section => {
+					if (section.getBoundingClientRect().top < winH * 0.92) {
+						section.classList.add('visible');
+					}
+				});
+			}
+
+			handleScroll();                              
+			document.addEventListener('DOMContentLoaded', handleScroll);
+			window.addEventListener('load', handleScroll);
+			window.addEventListener('scroll', handleScroll, { passive: true });
+		})();
+	</script>
+
+</body>
+
+</html>

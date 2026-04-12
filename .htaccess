@@ -1,0 +1,138 @@
+
+text/x-generic .htaccess ( ASCII text, with very long lines, with CRLF line terminators )
+# ==========================================
+# PRODUCTION .HTACCESS FOR STATIC HTML SITE
+# ==========================================
+
+# Enable rewrite engine
+RewriteEngine On
+
+# ------------------------------------------
+# SECURITY HEADERS
+# ------------------------------------------
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # Basic CSP for static frontend
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://code.jquery.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://api.iccict.org https://icaicn-be.onrender.com;"
+
+    Header unset X-Powered-By
+    Header unset Server
+</IfModule>
+
+# ------------------------------------------
+# COMPRESSION
+# ------------------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css
+    AddOutputFilterByType DEFLATE application/xml application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript application/json
+</IfModule>
+
+# ------------------------------------------
+# BROWSER CACHING
+# ------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Images
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+
+    # CSS and JS
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+
+    # Fonts
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+
+    # Video
+    ExpiresByType video/mp4 "access plus 1 month"
+    ExpiresByType video/webm "access plus 1 month"
+
+    # HTML
+    ExpiresByType text/html "access plus 1 hour"
+
+    # JSON/XML
+    ExpiresByType application/json "access plus 0 seconds"
+    ExpiresByType application/xml "access plus 0 seconds"
+    ExpiresByType text/xml "access plus 0 seconds"
+</IfModule>
+
+# ------------------------------------------
+# REMOVE .HTML EXTENSION FROM URLS
+# Example: /about -> /about.html
+# ------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|gif|ico|svg|webp|woff|woff2|ttf|eot|pdf|mp4|webm)$ [NC]
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# ------------------------------------------
+# REMOVE TRAILING SLASHES
+# ------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# ------------------------------------------
+# FORCE HTTPS
+# Uncomment only if SSL is active and working
+# ------------------------------------------
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ------------------------------------------
+# CUSTOM ERROR PAGES
+# ------------------------------------------
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+# ------------------------------------------
+# BLOCK ACCESS TO SENSITIVE FILES
+# ------------------------------------------
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|sql|conf|bak|backup|old|orig|save|swp|tmp)$">
+    Require all denied
+</FilesMatch>
+
+# Block hidden files like .env, .git, etc.
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# ------------------------------------------
+# DISABLE DIRECTORY LISTING
+# ------------------------------------------
+Options -Indexes
+
+# ------------------------------------------
+# DEFAULT CHARSET
+# ------------------------------------------
+AddDefaultCharset UTF-8
+
+# ------------------------------------------
+# PDF INLINE VIEW
+# ------------------------------------------
+<FilesMatch "\.pdf$">
+    Header set Content-Disposition "inline"
+</FilesMatch>
+
+# ------------------------------------------
+# MIME TYPES
+# ------------------------------------------
+AddType application/font-woff .woff
+AddType application/font-woff2 .woff2
+AddType image/svg+xml .svg
+AddType application/json .json
