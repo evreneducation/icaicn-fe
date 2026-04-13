@@ -1,0 +1,3022 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICAICN 2026</title>
+
+ <link rel="shortcut icon" href="assets/img/sponsors_logo/favicon.png" />
+ 
+    <!--===== CSS LINK =======-->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/aos.css" />
+    <link rel="stylesheet" href="assets/css/vendor/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/vendor/mobile.css" />
+    <link rel="stylesheet" href="assets/css/vendor/owlcarousel.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/sidebar.css" />
+    <link rel="stylesheet" href="assets/css/vendor/slick-slider.css" />
+    <link rel="stylesheet" href="assets/css/vendor/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/vendor/odometer.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/fontawesome.js"></script>
+    <script src="assets/js/vendor/aos.js"></script>
+    <script src="assets/js/vendor/jquery.appear.js"></script>
+    <script src="assets/js/vendor/jquery.odometer.min.js"></script>
+    <script src="assets/js/vendor/sidebar.js"></script>
+    <script src="assets/js/vendor/magnific-popup.js"></script>
+    <script src="assets/js/vendor/gsap.min.js"></script>
+    <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+    <script src="assets/js/vendor/Splitetext.js"></script>
+    <script src="assets/js/vendor/mobilemenu.js"></script>
+    <script src="assets/js/vendor/owlcarousel.min.js"></script>
+    <script src="assets/js/vendor/nice-select.js"></script>
+    <script src="assets/js/vendor/waypoints.js"></script>
+    <script src="assets/js/vendor/slick-slider.js"></script>
+    <script src="assets/js/vendor/circle-progress.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <style>
+      /* ===== ICCICT Header (Desktop) ===== */
+
+      /* teal strip behind */
+      .header-area.homepage4 {
+        background: #019087;
+        padding: 16px 0;
+      }
+
+      /* white rounded bar */
+      .header-area.homepage4 .header-elements {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 14px 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+      }
+
+      /* logo */
+      .header-area.homepage4 .site-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .header-area.homepage4 .site-logo img {
+        height: 50px;
+        width: auto;
+        object-fit: contain;
+        display: block;
+      }
+
+      /* menu right */
+      .header-area.homepage4 .main-menu {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      /* horizontal list */
+      .header-area.homepage4 .main-menu > ul {
+        display: flex !important;
+        align-items: center;
+        gap: 60px; /* spacing between items */
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+      }
+
+      .header-area.homepage4 .main-menu > ul > li {
+        position: relative;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      /* top links look */
+      .header-area.homepage4 .main-menu > ul > li > a {
+        color: #019087 !important;
+        font-weight: 500;
+        font-size: 16px;
+        text-decoration: none;
+        padding: 10px 4px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      /* hover underline vibe */
+      .header-area.homepage4 .main-menu > ul > li > a:hover {
+        opacity: 0.85;
+      }
+
+      /* dropdown */
+      .header-area.homepage4 .main-menu ul li ul.dropdown-padding {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 240px;
+        background: #ffffff;
+        border-radius: 14px;
+        padding: 10px 0;
+        margin: 10px 0 0 0;
+        list-style: none;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+        display: none;
+        z-index: 9999;
+      }
+
+      .header-area.homepage4 .main-menu ul li:hover > ul.dropdown-padding {
+        display: block;
+      }
+
+      .header-area.homepage4 .main-menu ul li ul.dropdown-padding li a {
+        display: block;
+        padding: 10px 16px;
+        color: #1b1b1b !important;
+        font-size: 14.5px;
+        text-decoration: none;
+      }
+
+      .header-area.homepage4 .main-menu ul li ul.dropdown-padding li a:hover {
+        background: rgba(1, 144, 135, 0.08);
+        color: #019087 !important;
+      }
+
+      /* caret icon smaller */
+      .header-area.homepage4 .main-menu i.fa-angle-down {
+        font-size: 12px;
+        transform: translateY(1px);
+      }
+
+      /* sticky feel */
+      .header.header-sticky {
+        position: sticky;
+        top: 0;
+        z-index: 9998;
+      }
+    </style>
+
+    <style>
+      /* ========= ICCICT THEME (from your screenshot) ========= */
+      :root {
+        --iccict-primary: #0b8f8a; /* main teal */
+        --iccict-primary-dark: #087a75; /* darker teal */
+        --iccict-bg: #f4f6f7; /* light background */
+        --iccict-card: #ffffff; /* card background */
+        --iccict-text: #0f172a; /* slate text */
+        --iccict-muted: #5b6775; /* muted text */
+        --iccict-border: rgba(11, 143, 138, 0.35);
+        --iccict-soft: rgba(11, 143, 138, 0.08);
+      }
+
+      body {
+        background: var(--iccict-bg);
+        color: var(--iccict-text);
+      }
+
+      /* ========= ACCORDION (Award Categories) ========= */
+      .ib-acc {
+        width: 100%;
+      }
+
+      .ib-item {
+        border-radius: 14px;
+        overflow: hidden;
+        margin-bottom: 16px;
+        background: var(--iccict-card);
+        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+        border: 1px solid var(--iccict-border);
+      }
+
+      .ib-summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 18px 18px;
+        background: var(--iccict-soft);
+        color: var(--iccict-primary-dark);
+        font-weight: 800;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        user-select: none;
+      }
+
+      .ib-summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .ib-chevron {
+        width: 10px;
+        height: 10px;
+        border-right: 2px solid var(--iccict-primary-dark);
+        border-bottom: 2px solid var(--iccict-primary-dark);
+        transform: rotate(45deg);
+        transition: transform 220ms ease;
+        margin-left: 12px;
+        flex: 0 0 auto;
+      }
+
+      details[open] .ib-chevron {
+        transform: rotate(-135deg);
+      }
+
+      .ib-content {
+        background: #fff;
+        padding: 18px;
+        animation: ibFade 220ms ease;
+      }
+
+      @keyframes ibFade {
+        from {
+          opacity: 0;
+          transform: translateY(-6px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .ib-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .ib-card {
+        background: #fff;
+        border-radius: 14px;
+        padding: 16px 16px;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+      }
+
+      .ib-card-title {
+        font-weight: 900;
+        color: var(--iccict-primary-dark);
+        font-size: 15px;
+        margin-bottom: 6px;
+      }
+
+      .ib-card-sub {
+        color: #334155;
+        font-size: 13.5px;
+        line-height: 1.6;
+        opacity: 0.95;
+      }
+
+      @media (max-width: 900px) {
+        .ib-grid {
+          grid-template-columns: 1fr;
+        }
+        .ib-summary {
+          font-size: 18px;
+        }
+      }
+
+      /* ========= HERO (converted to ICCICT teal theme) ========= */
+      .ibiea-hero2 {
+        position: relative;
+        min-height: 92vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 90px 0 70px;
+        text-align: center !important;
+        overflow: hidden;
+        background: var(--iccict-primary);
+      }
+
+      .ibiea-hero2::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+            circle at 50% 25%,
+            rgba(255, 255, 255, 0.18),
+            transparent 55%
+          ),
+          radial-gradient(
+            circle at 15% 80%,
+            rgba(255, 255, 255, 0.1),
+            transparent 60%
+          ),
+          radial-gradient(
+            circle at 85% 80%,
+            rgba(255, 255, 255, 0.1),
+            transparent 60%
+          ),
+          linear-gradient(
+            180deg,
+            var(--iccict-primary) 0%,
+            var(--iccict-primary-dark) 100%
+          );
+        z-index: 0;
+      }
+
+      .ibiea-hero2 .ibiea-wrap {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .ibiea-hero2,
+      .ibiea-hero2 * {
+        color: #fff !important;
+      }
+
+      .ibiea-hero2 .title {
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 1.05;
+        font-size: clamp(34px, 4.2vw, 64px);
+        margin: 0;
+        color: #ffffff !important;
+        text-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+      }
+
+      .ibiea-hero2 .chapter {
+        margin-top: 14px;
+        font-weight: 800;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.95) !important;
+      }
+
+      .ibiea-hero2 .subtitle {
+        margin-top: 10px;
+        font-size: 16px;
+        opacity: 0.92;
+      }
+
+      .ibiea-hero2 .date-box {
+        width: min(520px, 92vw);
+        border-radius: 16px;
+        padding: 22px 20px;
+        border: 2px solid rgba(255, 255, 255, 0.35);
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+      }
+
+      .ibiea-hero2 .date-box .label {
+        font-weight: 900;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.92) !important;
+        margin-bottom: 6px;
+      }
+
+      .ibiea-hero2 .date-box .date {
+        margin: 0;
+        font-weight: 900;
+        font-size: 28px;
+      }
+
+      .ibiea-hero2 .cta {
+        margin-top: 22px;
+      }
+
+      .ibiea-hero2 .btn-gold {
+        background: #ffffff !important;
+        color: var(--iccict-primary-dark) !important;
+        font-weight: 900;
+        border-radius: 12px;
+        padding: 12px 28px;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+      }
+
+      .ibiea-hero2 .btn-gold:hover {
+        filter: brightness(0.97);
+        transform: translateY(-1px);
+        transition: 0.2s ease;
+      }
+
+      .ibiea-hero2 .org {
+        margin-top: 26px;
+      }
+
+      .ibiea-hero2 .org-title {
+        font-weight: 800;
+        opacity: 0.95;
+        margin-bottom: 10px;
+      }
+
+      .ibiea-hero2 .logo-row {
+        display: flex;
+        justify-content: center;
+        gap: 28px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .ibiea-hero2 .logo-card {
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 14px;
+        padding: 12px 16px;
+      }
+
+      .ibiea-hero2 .logo-card img {
+        height: 44px;
+        width: auto;
+        display: block;
+        filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.2));
+      }
+
+      /* ========= Sections backgrounds to match ICCICT (white cards on light grey) ========= */
+      .sec-bg {
+        background: var(--iccict-bg);
+        padding: 70px 0;
+      }
+      .sec-title {
+        color: var(--iccict-primary-dark);
+        font-weight: 900;
+        font-size: 34px;
+        margin: 0;
+      }
+      .sec-sub {
+        color: var(--iccict-muted);
+      }
+
+      /* CTA at bottom */
+      .cta-dark {
+        background: var(--iccict-primary-dark);
+      }
+    </style>
+    <style>
+      /* TEMP FIX for header menu horizontal */
+      .header-area .main-menu > ul {
+        display: flex !important;
+        align-items: center !important;
+        gap: 22px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+      }
+      .header-area .main-menu > ul > li {
+        position: relative !important;
+        display: block !important;
+      }
+      .header-area .main-menu > ul > li > a {
+        display: inline-block !important;
+        padding: 10px 0 !important;
+      }
+      .header-area .main-menu ul li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: #fff;
+        padding: 12px 0;
+        margin: 0;
+        list-style: none;
+        box-shadow: 0 12px 26px rgba(0, 0, 0, 0.14);
+        border-radius: 10px;
+        z-index: 9999;
+      }
+      .header-area .main-menu ul li:hover > ul {
+        display: block;
+      }
+      .header-area .main-menu ul li ul li a {
+        display: block;
+        padding: 10px 16px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--=====HEADER START=======-->
+    <header>
+      <div
+        class="header-area homepage4 header header-sticky d-none d-lg-block"
+        id="header"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="header-elements">
+                <a href="index.html">
+                  <div class="site-logo">
+                    <img
+                      src="assets/img/sponsors_logo/new_logo.jpg"
+                      alt="logo"
+                      height="50"
+                      width="50"
+                    />
+                  </div>
+                </a>
+                <div class="main-menu">
+                  <ul>
+                    <li><a href="index.html">Home </a></li>
+                    <li>
+                      <a href="#"
+                        >Conference <i class="fa-solid fa-angle-down"></i
+                      ></a>
+                      <ul class="dropdown-padding">
+                        <li><a href="about.html">About Conference</a></li>
+                        <li><a href="paper.html">Submit Your Papers</a></li>
+                        <li><a href="agenda.html">Conference Agenda</a></li>
+                        <li>
+                          <a href="reviewer-expression.html"
+                            >Reviewer Expression</a
+                          >
+                        </li>
+                        <li><a href="faq.html">FAQs</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#"
+                        >Speakers <i class="fa-solid fa-angle-down"></i
+                      ></a>
+                      <ul class="dropdown-padding">
+                        <li>
+                          <a href="keynote-speakers.html">Keynote Speakers</a>
+                        </li>
+                        <li>
+                          <a href="keynote-speaker-register.html"
+                            >Keynote Speaker Registration</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="register.html">Register</a></li>
+                    <li>
+                      <a href="awards.html">Awards</a>
+                    </li>
+                    <li><a href="sponsors.html">Exhibitors</a></li>
+                    <li><a href="venue.html">Venue</a></li>
+                      <li>
+        <a href="Awardies.html">Awardee</a>
+    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                  </ul>
+                </div>
+                <div class="body-overlay"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--=====HEADER END =======-->
+
+    <!--===== MOBILE HEADER STARTS =======-->
+    <div class="mobile-header mobile-haeder4 d-block d-lg-none">
+      <div class="container-fluid">
+        <div class="col-12">
+          <div class="mobile-header-elements">
+            <a href="index.html">
+              <div class="site-logo" style="width: 150px">
+                <img src="assets/img/sponsors_logo/new_logo.jpg" alt="logo" />
+              </div>
+            </a>
+
+            <div class="mobile-nav-icon dots-menu">
+              <i class="fa-solid fa-bars-staggered"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-sidebar mobile-sidebar4">
+      <div class="logosicon-area">
+        <a href="index.html">
+          <div class="site-logo" style="width: 150px">
+            <img src="assets/img/sponsors_logo/new_logo.jpg" alt="logo" />
+          </div>
+        </a>
+
+        <div class="menu-close">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+
+      <div class="mobile-nav mobile-nav1">
+        <ul class="mobile-nav-list nav-list1">
+          <li><a href="index.html">Home </a></li>
+
+          <li>
+            <a href="#">Conference <i class="fa-solid fa-angle-down"></i></a>
+            <ul class="dropdown-padding">
+              <li><a href="about.html">About Conference</a></li>
+              <li><a href="paper.html">Submit Your Papers</a></li>
+              <li><a href="agenda.html">Conference Agenda</a></li>
+              <li>
+                <a href="reviewer-expression.html">Reviewer Expression</a>
+              </li>
+              <li><a href="faq.html">FAQs</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">Speakers <i class="fa-solid fa-angle-down"></i></a>
+            <ul class="dropdown-padding">
+              <li><a href="keynote-speakers.html">Keynote Speakers</a></li>
+              <li>
+                <a href="keynote-speaker-register.html"
+                  >Keynote Speaker Registration</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="register.html">Register</a></li>
+          <li><a href="awards.html">Awards</a></li>
+          <li><a href="sponsors.html">Exhibitors</a></li>
+          <li><a href="venue.html">Venue</a></li>
+            <li>
+        <a href="Awardies.html">Awardee</a>
+    </li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <div class="allmobilesection">
+          <a class="vl-btn4" href="contact.html"
+            ><span class="demo">Contact Us</span></a
+          >
+
+          <div class="single-footer">
+            <h3>Contact Info</h3>
+            <div class="footer1-contact-info">
+              <div class="contact-info-single">
+                <div class="contact-info-icon">
+                  <span><i class="fa-solid fa-phone-volume"></i></span>
+                </div>
+                <div class="contact-info-text">
+                  <a href="tel:+919540111207">+91-9540111312</a>
+                </div>
+              </div>
+
+              <div class="contact-info-single">
+                <div class="contact-info-icon">
+                  <span><i class="fa-solid fa-envelope"></i></span>
+                </div>
+                <div class="contact-info-text">
+                  <a href="mailto:info@icaicn.org">icaicn.traveon@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="single-footer">
+                <h3>Our Location</h3>
+                <div class="contact-info-single">
+                  <div class="contact-info-icon">
+                    <span><i class="fa-solid fa-location-dot"></i></span>
+                  </div>
+                  <div class="contact-info-text">
+                    <a
+                      href="https://maps.app.goo.gl/TPcoCrYTzf9Q77Lu5?g_st=aw"
+                      target="_blank"
+                    >
+                      New Delhi, India (To be confirmed)
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--===== MOBILE HEADER ENDS =======-->
+
+    <!-- HERO -->
+    <section class="ibiea-hero2">
+      <div class="container ibiea-wrap">
+        <h1 class="title" data-aos="fade-down">
+          International Research Innovation<br />
+          &amp; Excellence Awards 2026 (2.0)
+        </h1>
+
+    
+        <div class="subtitle" data-aos="fade-up" data-aos-delay="80">
+          Celebrating global excellence in business, research, and innovation
+        </div>
+
+        <div
+          data-aos="fade-up"
+          data-aos-delay="120"
+          style="
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+            align-items:stretch;
+            gap:20px;
+            margin-top:2rem;
+            flex-wrap:wrap;
+          "
+        >
+          <div class="date-box">
+            <div class="label">Announcement of Finalists</div>
+            <p class="date">06 June 2026</p>
+          </div>
+
+          <div class="date-box">
+            <div class="label">Awards Ceremony</div>
+            <p class="date">11-12 June 2026</p>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top:14px;">
+  <span style="
+    display:inline-block;
+    font-family: Arial, sans-serif;
+    font-size:22px;
+    font-weight:800;
+    color:#ffffff;
+    letter-spacing:0.5px;
+    padding-bottom:6px;
+    border-bottom:3px solid #9FF3E3;
+    text-shadow:0 2px 10px rgba(0,0,0,0.6);
+  ">
+    New Delhi-110003 (To be confirmed)
+  </span>
+</div>
+
+
+        <div class="cta" data-aos="zoom-in" data-aos-delay="160">
+          <a class="btn-gold" href="#nominate">Nominate Now</a>
+        </div>
+
+<div style="display:flex; justify-content:center; align-items:flex-start; gap:28px; flex-wrap:wrap; margin-top:18px;"
+     data-aos="fade-up" data-aos-delay="190">
+
+  <!-- Organized by -->
+ <div style="text-align:center;"> <div style="color:#ffffff; font-weight:700; margin-bottom:10px;">Organized by</div> <div style="display:flex; justify-content:center;"> <div style="background:#ffffff; border-radius:16px; padding:12px 16px; box-shadow:0 10px 28px rgba(0,0,0,0.25); display:flex; align-items:center; justify-content:center; min-width:150px;"> <img src="assets/img/nomination/logo.png" alt="IBIEA" style="max-height:48px; max-width:160px; width:auto; height:auto; display:block;" /> </div> </div> </div>
+
+
+  <!-- Sponsored by -->
+  <div style="text-align:center;">
+    <div style="color:#ffffff; font-weight:700; margin-bottom:10px;">Sponsored by</div>
+    <div style="display:flex; justify-content:center;">
+      <div style="background:#ffffff; border-radius:16px; padding:12px 16px; box-shadow:0 10px 28px rgba(0,0,0,0.25); display:flex; align-items:center; justify-content:center; min-width:150px;">
+        <img src="assets/img/nomination/iccictlogo.jpg" alt="Sponsor"
+             style="max-height:48px; max-width:160px; width:auto; height:auto; display:block;" />
+      </div>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+    </section>
+    
+    <!--Hero Section Ends Here -->
+    
+    
+
+    <!-- 3 CARDS STRIP -->
+    <section class="sec-bg">
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="bg-white rounded-4 shadow-sm p-4 text-center h-100"
+              style="border: 1px solid rgba(15, 23, 42, 0.06)"
+            >
+              <div class="mb-3">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  style="display: inline-block"
+                >
+                  <path
+                    d="M8 4h8v3a4 4 0 0 1-8 0V4Z"
+                    stroke="var(--iccict-primary-dark)"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M6 5H4a2 2 0 0 0 2 5"
+                    stroke="var(--iccict-primary-dark)"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M18 5h2a2 2 0 0 1-2 5"
+                    stroke="var(--iccict-primary-dark)"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 11v4"
+                    stroke="var(--iccict-primary-dark)"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M8 20h8"
+                    stroke="var(--iccict-primary-dark)"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M10 15h4"
+                    stroke="var(--iccict-primary-dark)"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div
+                style="
+                  font-size: 22px;
+                  font-weight: 900;
+                  color: var(--iccict-text);
+                  margin-bottom: 8px;
+                "
+              >
+                Research Excellence Awards
+              </div>
+              <div class="sec-sub" style="font-size: 15px; line-height: 1.6">
+                Recognizing outstanding research contributions, high-impact
+                publications, and innovation across scientific and academic
+                disciplines.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="bg-white rounded-4 shadow-sm p-4 text-center h-100"
+              style="border: 1px solid rgba(15, 23, 42, 0.06)"
+            >
+              <div class="mb-3">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  style="display: inline-block"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="9"
+                    stroke="var(--iccict-primary-dark)"
+                    stroke-width="1.8"
+                  />
+                  <path
+                    d="M3 12h18"
+                    stroke="var(--iccict-primary-dark)"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M12 3c2.5 2.7 3.8 5.8 3.8 9S14.5 18.3 12 21c-2.5-2.7-3.8-5.8-3.8-9S9.5 5.7 12 3Z"
+                    stroke="var(--iccict-primary-dark)"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div
+                style="
+                  font-size: 22px;
+                  font-weight: 900;
+                  color: var(--iccict-text);
+                  margin-bottom: 8px;
+                "
+              >
+                Global Research Platform
+              </div>
+              <div class="sec-sub" style="font-size: 15px; line-height: 1.6">
+                Providing researchers with an international platform to present,
+                publish, and showcase their research work.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="bg-white rounded-4 shadow-sm p-4 text-center h-100"
+              style="border: 1px solid rgba(15, 23, 42, 0.06)"
+            >
+              <div class="mb-3">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  style="display: inline-block"
+                >
+                  <path
+                    d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z"
+                    stroke="var(--iccict-primary-dark)"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M4 20c1.8-4 14.2-4 16 0"
+                    stroke="var(--iccict-primary-dark)"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div
+                style="
+                  font-size: 22px;
+                  font-weight: 900;
+                  color: var(--iccict-text);
+                  margin-bottom: 8px;
+                "
+              >
+                Academic & Research Networking
+              </div>
+              <div class="sec-sub" style="font-size: 15px; line-height: 1.6">
+                Facilitating meaningful interactions with researchers,
+                academicians, and industry experts from across the globe.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="sec-bg" style="padding-top: 0">
+      <div class="container" style="padding-top: 70px">
+        <div class="text-center mb-4">
+          <h2 class="sec-title">About the Awards</h2>
+        </div>
+
+        <div class="row g-4 align-items-start">
+          <div class="col-12 col-lg-6">
+            <p
+              class="sec-sub"
+              style="font-size: 15px; line-height: 1.9; margin-bottom: 18px"
+            >
+              The International Research Innovation and Excellence Awards is a
+              prestigious global platform dedicated to recognizing and
+              celebrating outstanding achievements in research, academia, and
+              innovation. The event honors researchers, academicians,
+              scientists, and innovators who have demonstrated excellence in
+              their respective domains and have made significant contributions
+              to knowledge advancement and societal development.
+            </p>
+            <p
+              class="sec-sub"
+              style="font-size: 15px; line-height: 1.9; margin: 0"
+            >
+              Proudly organized by IBIEA (International Business Innovation and
+              Excellence Awards), this distinguished award function will be
+              hosted across multiple countries worldwide. The event aims to
+              acknowledge exceptional scholarly contributions, promote global
+              academic collaboration, and inspire the next generation of
+              research and academic leaders.
+            </p>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div
+              class="bg-white rounded-4 overflow-hidden shadow-sm"
+              style="border: 1px solid rgba(15, 23, 42, 0.06)"
+            >
+              <img
+                src="assets/img/conference_img/aboutawards.jpg"
+                alt="Awards"
+                class="w-100"
+                style="height: 320px; object-fit: cover; display: block"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-3">
+          <div class="col-12 col-lg-6">
+            <div
+              class="bg-white rounded-4 shadow-sm p-4 h-100"
+              style="border: 1px solid rgba(15, 23, 42, 0.06)"
+            >
+              <div
+                style="
+                  font-size: 22px;
+                  font-weight: 900;
+                  color: var(--iccict-primary-dark);
+                  margin-bottom: 12px;
+                "
+              >
+                Who Can Apply?
+              </div>
+              <ul
+                class="mb-0"
+                style="
+                  padding-left: 18px;
+                  color: #334155;
+                  line-height: 1.9;
+                  font-size: 14.5px;
+                "
+              >
+                <li class="mb-2">
+                  Researchers, academicians, and scientists with significant
+                  contributions to research and innovation
+                </li>
+                <li class="mb-2">
+                  Faculty members and educators demonstrating excellence in
+                  teaching, mentoring, and academic leadership
+                </li>
+                <li class="mb-0">
+                  Research scholars (PhD / Postdoctoral / Early Career) with
+                  impactful publications or innovations
+                </li>
+                <li class="mb-0">
+                  Institutions, research groups, and centers contributing to
+                  knowledge advancement and societal impact
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div
+              class="bg-white rounded-4 shadow-sm p-4 h-100"
+              style="border: 1px solid rgba(15, 23, 42, 0.06)"
+            >
+              <div
+                style="
+                  font-size: 22px;
+                  font-weight: 900;
+                  color: var(--iccict-primary-dark);
+                  margin-bottom: 12px;
+                "
+              >
+                Key Highlights
+              </div>
+              <ul
+                class="mb-0"
+                style="
+                  padding-left: 18px;
+                  color: #334155;
+                  line-height: 1.9;
+                  font-size: 14.5px;
+                "
+              >
+                <li class="mb-2">
+                  A prestigious international platform to recognize excellence
+                  in research and academia
+                </li>
+                <li class="mb-2">
+                  Recognition by a distinguished panel of academic and research
+                  experts
+                </li>
+                <li class="mb-2">
+                  Opportunities for global academic networking and collaboration
+                </li>
+                <li class="mb-0">
+                  International visibility, citation recognition, and
+                  professional acknowledgment
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--form starts form here -->
+    <!-- NOMINATION FORM SECTION (IBIEA theme) -->
+    <section
+      id="nominate"
+      style="
+        background: #067a80;
+        padding: 80px 0;
+        position: relative;
+        overflow: hidden;
+      "
+    >
+      <!-- glow -->
+      <!-- <div style="position:absolute; inset:0; background:
+      radial-gradient(circle at 50% 10%, rgba(242,180,0,0.22), transparent 55%),
+      radial-gradient(circle at 15% 80%, rgba(242,180,0,0.10), transparent 60%),
+      radial-gradient(circle at 85% 80%, rgba(242,180,0,0.10), transparent 60%),
+      linear-gradient(180deg, #070602 0%, #040302 100%);
+    "></div> -->
+
+      <div class="container position-relative" style="z-index: 2">
+        <!-- heading -->
+        <div class="text-center mb-4">
+          <h2 class="fw-bold" style="color:white; font-size:28px; margin:0;">
+        Nominate for IRIEA 2026
+      </h2>
+          <p
+            class="mb-0"
+            style="color: rgba(255, 255, 255, 0.85); font-size: 12.5px"
+          >
+            Submit your nomination for the International Research Innovation and
+            Excellence Awards 2026
+          </p>
+        </div>
+
+        <!-- card -->
+        <div
+          class="mx-auto bg-white rounded-3 shadow"
+          style="
+            max-width: 760px;
+            padding: 22px 22px;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+          "
+        >
+          <div class="text-center mb-3">
+            <div class="fw-bold" style="font-size: 18px; color: #2a1a12">
+              Nomination Form
+            </div>
+          </div>
+
+          <form id="nominationForm" novalidate>
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label
+                  class="form-label fw-semibold"
+                  style="font-size: 12px; color: #4b2417"
+                  >Full Name</label
+                >
+                <input
+                  id="fullName"
+                  name="fullName"
+                  type="text"
+                  class="form-control"
+                  placeholder=""
+                  style="border-color: #d9d2c7"
+                />
+                <div
+                  class="small mt-1"
+                  id="err_fullName"
+                  style="color: #b42318; display: none"
+                ></div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label
+                  class="form-label fw-semibold"
+                  style="font-size: 12px; color: #4b2417"
+                  >Designation</label
+                >
+                <input
+                  id="designation"
+                  name="designation"
+                  type="text"
+                  class="form-control"
+                  style="border-color: #d9d2c7"
+                />
+                <div
+                  class="small mt-1"
+                  id="err_designation"
+                  style="color: #b42318; display: none"
+                ></div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label
+                  class="form-label fw-semibold"
+                  style="font-size: 12px; color: #4b2417"
+                  >Organization/Company Name</label
+                >
+                <input
+                  id="orgName"
+                  name="orgName"
+                  type="text"
+                  class="form-control"
+                  style="border-color: #d9d2c7"
+                />
+                <div
+                  class="small mt-1"
+                  id="err_orgName"
+                  style="color: #b42318; display: none"
+                ></div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label
+                  class="form-label fw-semibold"
+                  style="font-size: 12px; color: #4b2417"
+                  >Industry/Sector</label
+                >
+                <input
+                  id="industry"
+                  name="industry"
+                  type="text"
+                  class="form-control"
+                  style="border-color: #d9d2c7"
+                />
+                <div
+                  class="small mt-1"
+                  id="err_industry"
+                  style="color: #b42318; display: none"
+                ></div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label
+                  class="form-label fw-semibold"
+                  style="font-size: 12px; color: #4b2417"
+                  >Country</label
+                >
+                <input
+                  id="country"
+                  name="country"
+                  type="text"
+                  class="form-control"
+                  style="border-color: #d9d2c7"
+                />
+                <div
+                  class="small mt-1"
+                  id="err_country"
+                  style="color: #b42318; display: none"
+                ></div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label
+                  class="form-label fw-semibold"
+                  style="font-size: 12px; color: #4b2417"
+                  >Email Address</label
+                >
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  class="form-control"
+                  placeholder="name@example.com"
+                  style="border-color: #d9d2c7"
+                />
+                <div
+                  class="small mt-1"
+                  id="err_email"
+                  style="color: #b42318; display: none"
+                ></div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label
+                  class="form-label fw-semibold"
+                  style="font-size: 12px; color: #4b2417"
+                  >Phone Number</label
+                >
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  class="form-control"
+                  placeholder=""
+                  style="border-color: #d9d2c7"
+                />
+                <div
+                  class="small mt-1"
+                  id="err_phone"
+                  style="color: #b42318; display: none"
+                ></div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label
+                  class="form-label fw-semibold"
+                  style="font-size: 12px; color: #4b2417"
+                  >Award Category</label
+                >
+                <select
+                  id="awardCategory"
+                  name="awardCategory"
+                  class="form-select"
+                  style="border-color: #d9d2c7"
+                >
+                  <option value="">Select a category</option>
+
+                  <option value="Research Excellence Awards">
+                    Research Excellence Awards
+                  </option>
+                  <option value="Teaching & Academic Excellence Awards">
+                    Teaching &amp; Academic Excellence Awards
+                  </option>
+                  <option value="Student Achievement Awards">
+                    Student Achievement Awards
+                  </option>
+                  <option value="Institutional & Leadership Excellence Awards">
+                    Institutional &amp; Leadership Excellence Awards
+                  </option>
+                  <option
+                    value="Social Impact & Professional Contribution Awards"
+                  >
+                    Social Impact &amp; Professional Contribution Awards
+                  </option>
+                  <option value="Technology & Digital Transformation Awards">
+                    Technology &amp; Digital Transformation Awards
+                  </option>
+                  <option
+                    value="International Collaboration & Global Impact Awards"
+                  >
+                    International Collaboration &amp; Global Impact Awards
+                  </option>
+                  <option
+                    value="Diversity, Inclusion & Capacity Building Awards"
+                  >
+                    Diversity, Inclusion &amp; Capacity Building Awards
+                  </option>
+                  <option
+                    value="Women in Research & Education Excellence Award"
+                  >
+                    Women in Research &amp; Education Excellence Award
+                  </option>
+                </select>
+
+                <div
+                  class="small mt-1"
+                  id="err_awardCategory"
+                  style="color: #b42318; display: none"
+                ></div>
+              </div>
+
+              <div class="col-12">
+                <label
+                  class="form-label fw-semibold"
+                  style="font-size: 12px; color: #4b2417"
+                >
+                  Brief Description of Achievements (20-500 words)
+                </label>
+                <textarea
+                  id="achievements"
+                  name="achievements"
+                  class="form-control"
+                  rows="4"
+                  style="border-color: #d9d2c7"
+                ></textarea>
+                <div class="d-flex justify-content-between mt-1">
+                  <div
+                    class="small"
+                    id="err_achievements"
+                    style="color: #b42318; display: none"
+                  ></div>
+                  <div class="small" id="wordCount" style="color: #7a6a60">
+                    0 words
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label
+                  class="form-label fw-semibold"
+                  style="font-size: 12px; color: #4b2417"
+                  >Key Contributions and Impact</label
+                >
+                <textarea
+                  id="impact"
+                  name="impact"
+                  class="form-control"
+                  rows="3"
+                  style="border-color: #d9d2c7"
+                ></textarea>
+                <div
+                  class="small mt-1"
+                  id="err_impact"
+                  style="color: #b42318; display: none"
+                ></div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label
+                  class="form-label fw-semibold"
+                  style="font-size: 12px; color: #4b2417"
+                  >Awards and Recognitions (if any)</label
+                >
+                <textarea
+                  id="recognitions"
+                  name="recognitions"
+                  class="form-control"
+                  rows="3"
+                  style="border-color: #d9d2c7"
+                ></textarea>
+                <div
+                  class="small mt-1"
+                  id="err_recognitions"
+                  style="color: #b42318; display: none"
+                ></div>
+              </div>
+
+              <!-- file upload + preview -->
+              <div class="col-12">
+                <label
+                  class="form-label fw-semibold"
+                  style="font-size: 12px; color: #4b2417"
+                  >Supporting Documents (if any)</label
+                >
+                <input
+                  id="supportFile"
+                  name="supportFile"
+                  type="file"
+                  class="form-control"
+                  accept=".pdf,.png,.jpg,.jpeg,.webp,.doc,.docx"
+                  style="border-color: #d9d2c7"
+                />
+                <div
+                  class="small mt-2"
+                  id="fileMeta"
+                  style="color: #4b2417; display: none"
+                ></div>
+
+                <div
+                  id="filePreviewWrap"
+                  style="display: none; margin-top: 10px"
+                >
+                  <div
+                    class="rounded-3"
+                    style="
+                      border: 1px solid rgba(0, 0, 0, 0.08);
+                      overflow: hidden;
+                      background: #faf7f2;
+                    "
+                  >
+                    <!-- Image preview -->
+                    <img
+                      id="imgPreview"
+                      alt=""
+                      style="
+                        display: none;
+                        width: 100%;
+                        max-height: 360px;
+                        object-fit: contain;
+                        background: #fff;
+                      "
+                    />
+                    <!-- PDF preview -->
+                    <iframe
+                      id="pdfPreview"
+                      title="PDF Preview"
+                      style="
+                        display: none;
+                        width: 100%;
+                        height: 360px;
+                        border: 0;
+                        background: #fff;
+                      "
+                    ></iframe>
+                  </div>
+                  <div class="text-center small mt-2" style="color: #6b4a35">
+                    We wish you success in your future endeavor.
+                  </div>
+                </div>
+
+                <div
+                  class="small mt-1"
+                  id="err_supportFile"
+                  style="color: #b42318; display: none"
+                ></div>
+              </div>
+
+              <!-- terms -->
+              <div class="col-12">
+                <div class="d-flex align-items-start gap-2">
+                  <input id="terms" type="checkbox" style="margin-top: 4px" />
+                  <label
+                    for="terms"
+                    class="small"
+                    style="color: #3b2a22; line-height: 1.5"
+                  >
+                    I agree to the <u>Terms and Conditions</u> and confirm that
+                    all information provided is accurate and complete. I
+                    understand that false information may result in
+                    disqualification.
+                  </label>
+                </div>
+                <div
+                  class="small mt-1"
+                  id="err_terms"
+                  style="color: #b42318; display: none"
+                ></div>
+              </div>
+
+              <!-- submit -->
+              <div class="col-12">
+                <button
+  id="submitBtn"
+  type="submit"
+  class="w-100"
+  style="
+    background-color: #067A80;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 12px;
+  "
+ 
+>
+  Submit Nomination
+</button>
+
+                <div class="small text-center mt-2" style="color: #7a6a60">
+                  Submit button will enable after you accept terms and all
+                  required fields are valid.
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!--form ends here -->
+
+    <!-- AWARD CATEGORIES -->
+    <section class="sec-bg" style="padding-top: 0">
+      <div class="container" style="padding-top: 70px">
+        <div class="text-center mb-4">
+          <h2 class="sec-title">Award Categories</h2>
+        </div>
+
+        <div class="ib-acc">
+          <!-- 1) Research Excellence Awards -->
+          <details class="ib-item">
+            <summary class="ib-summary">
+              <span>Research Excellence Awards</span>
+              <span class="ib-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="ib-content">
+              <div class="ib-grid">
+                <div class="ib-card">
+                  <div class="ib-card-title">Best Researcher of the Year</div>
+                  <div class="ib-card-sub">
+                    Recognition for outstanding research contribution and
+                    impact.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">Young Researcher Award</div>
+                  <div class="ib-card-sub">
+                    Awarded to promising early-stage researchers with strong
+                    potential.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Outstanding Interdisciplinary Research Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Honors research that bridges disciplines to create
+                    meaningful outcomes.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">High Impact Publication Award</div>
+                  <div class="ib-card-sub">
+                    For publications demonstrating high citations, visibility,
+                    or real-world influence.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Innovation &amp; Patent Excellence Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Recognizes innovation through patents, prototypes, and
+                    applied research.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- 2) Teaching & Academic Excellence Awards -->
+          <details class="ib-item">
+            <summary class="ib-summary">
+              <span>Teaching &amp; Academic Excellence Awards</span>
+              <span class="ib-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="ib-content">
+              <div class="ib-grid">
+                <div class="ib-card">
+                  <div class="ib-card-title">Best Teacher of the Year</div>
+                  <div class="ib-card-sub">
+                    Honors exceptional teaching excellence and student outcomes.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Excellence in Innovative Teaching Practices
+                  </div>
+                  <div class="ib-card-sub">
+                    Recognizes new-age pedagogy and classroom innovation.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Digital &amp; Online Education Excellence Award
+                  </div>
+                  <div class="ib-card-sub">
+                    For excellence in online learning delivery and digital
+                    instruction quality.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Curriculum Design &amp; Development Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Recognizes impactful curriculum design aligned with future
+                    skills.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Student Mentorship Excellence Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Honors strong mentorship supporting student growth and
+                    success.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- 3) Student Achievement Awards -->
+          <details class="ib-item">
+            <summary class="ib-summary">
+              <span>Student Achievement Awards</span>
+              <span class="ib-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="ib-content">
+              <div class="ib-grid">
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Best Student Research Paper Award
+                  </div>
+                  <div class="ib-card-sub">
+                    For outstanding research paper authored by a student.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Best PhD / Doctoral Thesis Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Honors impactful doctoral research and thesis contribution.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Best Master’s Dissertation Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Recognizes excellent master’s-level dissertation work.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">Emerging Scholar Award</div>
+                  <div class="ib-card-sub">
+                    For high-potential students demonstrating research
+                    leadership.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Academic Excellence Award (Student Category)
+                  </div>
+                  <div class="ib-card-sub">
+                    Honors consistent academic performance and achievements.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- 4) Institutional & Leadership Excellence Awards -->
+          <details class="ib-item">
+            <summary class="ib-summary">
+              <span>Institutional &amp; Leadership Excellence Awards</span>
+              <span class="ib-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="ib-content">
+              <div class="ib-grid">
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Outstanding Academic Leader Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Recognizes exceptional academic leadership and institutional
+                    impact.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Best Research Institution / University Award
+                  </div>
+                  <div class="ib-card-sub">
+                    For institutions with strong research output and ecosystem.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Excellence in Research Management Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Honors effective research governance, grants, and execution.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Industry–Academia Collaboration Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Recognizes partnerships translating research into real
+                    outcomes.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Global Academic Leadership Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Honors leadership with global academic influence and reach.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- 5) Social Impact & Professional Contribution Awards -->
+          <details class="ib-item">
+            <summary class="ib-summary">
+              <span>Social Impact &amp; Professional Contribution Awards</span>
+              <span class="ib-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="ib-content">
+              <div class="ib-grid">
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Research with Social Impact Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Honors research creating measurable benefit for society.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Excellence in Sustainable Education Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Recognizes sustainability-driven education initiatives and
+                    impact.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Ethics &amp; Integrity in Research Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Honors ethical research practices and integrity leadership.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Community Engagement &amp; Outreach Award
+                  </div>
+                  <div class="ib-card-sub">
+                    For programs connecting academia with community development.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Lifetime Achievement in Research &amp; Education
+                  </div>
+                  <div class="ib-card-sub">
+                    Honors long-term, high-impact contributions across the
+                    field.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- 6) Technology & Digital Transformation Awards -->
+          <details class="ib-item">
+            <summary class="ib-summary">
+              <span>Technology &amp; Digital Transformation Awards</span>
+              <span class="ib-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="ib-content">
+              <div class="ib-grid">
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Excellence in Educational Technology (EdTech)
+                  </div>
+                  <div class="ib-card-sub">
+                    Recognizes outstanding EdTech innovation and adoption.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    AI &amp; Data Science Research Excellence Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Honors impactful research in AI, ML, and data science.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Cybersecurity &amp; Information Systems Research Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Recognizes contributions to cybersecurity and information
+                    systems.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Smart Learning Systems Innovation Award
+                  </div>
+                  <div class="ib-card-sub">
+                    For smart learning platforms and next-gen learning systems.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Digital Transformation in Education Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Honors institutions driving digital transformation at scale.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- 7) International Collaboration & Global Impact Awards -->
+          <details class="ib-item">
+            <summary class="ib-summary">
+              <span
+                >International Collaboration &amp; Global Impact Awards</span
+              >
+              <span class="ib-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="ib-content">
+              <div class="ib-grid">
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    International Research Collaboration Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Recognizes impactful research done through global
+                    collaborations.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Global Academic Partnership Excellence Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Honors high-value academic partnerships across countries.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Cross-Border Research Impact Award
+                  </div>
+                  <div class="ib-card-sub">
+                    For research delivering outcomes across borders and regions.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Visiting Scholar / Professor Excellence Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Recognizes excellence of visiting scholars/professors and
+                    contribution.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Global Research Leadership Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Honors leadership shaping global research direction and
+                    quality.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- 8) Diversity, Inclusion & Capacity Building Awards -->
+          <details class="ib-item">
+            <summary class="ib-summary">
+              <span>Diversity, Inclusion &amp; Capacity Building Awards</span>
+              <span class="ib-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="ib-content">
+              <div class="ib-grid">
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Women in Research &amp; Education Excellence Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Honors excellence and impact by women in academia and
+                    research.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Diversity &amp; Inclusion Leadership Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Recognizes inclusive leadership and equitable initiatives.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Capacity Building in Higher Education Award
+                  </div>
+                  <div class="ib-card-sub">
+                    For strengthening faculty, systems, and educational
+                    capacity.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Excellence in Rural / Underserved Education Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Honors outstanding work in underserved or rural education
+                    upliftment.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Early Career Faculty Development Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Recognizes early-stage faculty development and teaching
+                    impact.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- 9) Women in Research & Education Excellence Award (Special) -->
+          <details class="ib-item">
+            <summary class="ib-summary">
+              <span
+                >Women in Research &amp; Education Excellence Award
+                (Special)</span
+              >
+              <span class="ib-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="ib-content">
+              <div class="ib-grid">
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Women Research Excellence Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Honors excellence and achievements in research
+                    contributions.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Women Teaching &amp; Mentorship Excellence Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Recognizes outstanding teaching, guidance, and mentorship
+                    impact.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Women Leadership in Academia Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Honors leadership roles and institutional impact in
+                    academia.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Emerging Woman Academic / Researcher Award
+                  </div>
+                  <div class="ib-card-sub">
+                    For high-potential emerging women academics and researchers.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Women Empowerment &amp; Gender Equity Impact Award
+                  </div>
+                  <div class="ib-card-sub">
+                    Recognizes initiatives driving empowerment and gender
+                    equity.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- 10) Research & Education Award Categories (Overview) -->
+          <details class="ib-item">
+            <summary class="ib-summary">
+              <span>Research &amp; Education Award Categories (Overview)</span>
+              <span class="ib-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="ib-content">
+              <div class="ib-grid">
+                <div class="ib-card">
+                  <div class="ib-card-title">Research Excellence Awards</div>
+                  <div class="ib-card-sub">
+                    Best Researcher, Young Researcher, Interdisciplinary,
+                    Publications, Patents.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Teaching &amp; Academic Excellence Awards
+                  </div>
+                  <div class="ib-card-sub">
+                    Best Teacher, Innovative Teaching, Digital Education,
+                    Curriculum, Mentorship.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">Student Achievement Awards</div>
+                  <div class="ib-card-sub">
+                    Best Paper, Best Thesis, Dissertation, Emerging Scholar,
+                    Academic Excellence.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">
+                    Institutional &amp; Leadership Excellence Awards
+                  </div>
+                  <div class="ib-card-sub">
+                    Academic Leader, Best Institution, Research Management,
+                    Industry-Academia, Global Leadership.
+                  </div>
+                </div>
+                <div class="ib-card">
+                  <div class="ib-card-title">More Categories</div>
+                  <div class="ib-card-sub">
+                    Social Impact, Technology & Digital Transformation,
+                    International Collaboration, Diversity & Inclusion.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="sec-bg" style="padding-top: 0">
+      <div class="container" style="padding-top: 70px">
+        <div class="text-center mb-4">
+          <h2 class="sec-title">ICCICT Conference Gallery</h2>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="bg-white rounded-4 shadow-sm overflow-hidden h-100"
+              style="border: 1px solid rgba(15, 23, 42, 0.06)"
+            >
+              <div style="height: 240px; overflow: hidden">
+                <img
+                  src="assets/img/conference_img/about3.jpg"
+                  alt="Networking Event"
+                  class="w-100 h-100"
+                  style="object-fit: cover; display: block"
+                />
+              </div>
+              <!-- <div class="text-center py-3 fw-semibold" style="color:var(--iccict-primary-dark);">
+                Networking Event
+              </div> -->
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="bg-white rounded-4 shadow-sm overflow-hidden h-100"
+              style="border: 1px solid rgba(15, 23, 42, 0.06)"
+            >
+              <div style="height: 240px; overflow: hidden">
+                <img
+                  src="assets/img/conference_img/engage.jpg"
+                  alt="Venue - Grand Hyatt"
+                  class="w-100 h-100"
+                  style="object-fit: cover; display: block"
+                />
+              </div>
+              <!-- <div class="text-center py-3 fw-semibold" style="color:var(--iccict-primary-dark);">
+                Venue - Grand Hyatt
+              </div> -->
+            </div>
+          </div>
+
+          <!-- <div class="col-12 col-md-6 col-lg-4">
+            <div class="bg-white rounded-4 shadow-sm overflow-hidden h-100" style="border:1px solid rgba(15,23,42,0.06);">
+              <div style="height:240px; overflow:hidden; background:#f6f7f8;">
+                <img src="assets/img/nomination/gn3.jpg" alt="Award Trophy"
+                  class="w-100 h-100" style="object-fit:contain; display:block; padding:14px;">
+              </div>
+              <div class="text-center py-3 fw-semibold" style="color:var(--iccict-primary-dark);">
+                Award Trophy
+              </div>
+            </div>
+          </div> -->
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="bg-white rounded-4 shadow-sm overflow-hidden h-100"
+              style="border: 1px solid rgba(15, 23, 42, 0.06)"
+            >
+              <div style="height: 240px; overflow: hidden; background: #eef1f3">
+                <img
+                  src="assets/img/conference_img/network.jpg"
+                  alt="Tariq Al-Barwani"
+                  class="w-100 h-100"
+                  style="object-fit: cover; display: block"
+                />
+              </div>
+              <!-- <div class="text-center py-3 fw-semibold" style="color:var(--iccict-primary-dark);">
+                Tariq Al-Barwani (Keynote Speaker)
+              </div> -->
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="bg-white rounded-4 shadow-sm overflow-hidden h-100"
+              style="border: 1px solid rgba(15, 23, 42, 0.06)"
+            >
+              <div style="height: 240px; overflow: hidden">
+                <img
+                  src="assets/img/conference_img/homeabout.jpg"
+                  alt="Panel Discussion"
+                  class="w-100 h-100"
+                  style="object-fit: cover; display: block"
+                />
+              </div>
+              <!-- <div class="text-center py-3 fw-semibold" style="color:var(--iccict-primary-dark);">
+                Panel Discussion
+              </div> -->
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="bg-white rounded-4 shadow-sm overflow-hidden h-100"
+              style="border: 1px solid rgba(15, 23, 42, 0.06)"
+            >
+              <div style="height: 240px; overflow: hidden">
+                <img
+                  src="assets/img/conference_img/research.jpg"
+                  alt="Panel Discussion"
+                  class="w-100 h-100"
+                  style="object-fit: cover; display: block"
+                />
+              </div>
+              <!-- <div class="text-center py-3 fw-semibold" style="color:var(--iccict-primary-dark);">
+                Panel Discussion
+              </div> -->
+            </div>
+          </div>
+
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="bg-white rounded-4 shadow-sm overflow-hidden h-100"
+              style="border: 1px solid rgba(15, 23, 42, 0.06)"
+            >
+              <div style="height: 240px; overflow: hidden">
+                <img
+                  src="assets/img/conference_img/aboutawards.jpg"
+                  alt="Panel Discussion"
+                  class="w-100 h-100"
+                  style="object-fit: cover; display: block"
+                />
+              </div>
+              <!-- <div class="text-center py-3 fw-semibold" style="color:var(--iccict-primary-dark);">
+                Panel Discussion
+              </div> -->
+            </div>
+          </div>
+
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="bg-white rounded-4 shadow-sm overflow-hidden h-100"
+              style="border: 1px solid rgba(15, 23, 42, 0.06)"
+            >
+              <div style="height: 240px; overflow: hidden">
+                <img
+                  src="assets/img/conference_img/awards2.jpg"
+                  alt="Panel Discussion"
+                  class="w-100 h-100"
+                  style="object-fit: cover; display: block"
+                />
+              </div>
+              <!-- <div class="text-center py-3 fw-semibold" style="color:var(--iccict-primary-dark);">
+                Panel Discussion
+              </div> -->
+            </div>
+          </div>
+          
+           <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="bg-white rounded-4 shadow-sm overflow-hidden h-100"
+              style="border: 1px solid rgba(15, 23, 42, 0.06)"
+            >
+              <div style="height: 240px; overflow: hidden">
+                <img
+                  src="assets/img/conference_img/speaker.jpg"
+                  alt="Panel Discussion"
+                  class="w-100 h-100"
+                  style="object-fit: cover; display: block"
+                />
+              </div>
+              <!-- <div class="text-center py-3 fw-semibold" style="color:var(--iccict-primary-dark);">
+                Panel Discussion
+              </div> -->
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="bg-white rounded-4 shadow-sm overflow-hidden h-100"
+              style="border: 1px solid rgba(15, 23, 42, 0.06)"
+            >
+              <div style="height: 240px; overflow: hidden">
+                <img
+                  src="assets/img/conference_img/awards.jpg"
+                  alt="City of Muscat"
+                  class="w-100 h-100"
+                  style="object-fit: cover; display: block"
+                />
+              </div>
+              <!-- <div class="text-center py-3 fw-semibold" style="color:var(--iccict-primary-dark);">
+                City of Muscat
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ (your JS logic preserved, colors changed to ICCICT theme) -->
+    <section class="sec-bg" style="padding-top: 0">
+      <div class="container" style="padding-top: 70px">
+        <div class="text-center mb-4">
+          <h2 class="sec-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <div
+              class="bg-white rounded-4 shadow-sm mb-3 overflow-hidden"
+              style="border: 1px solid rgba(15, 23, 42, 0.06)"
+            >
+              <button
+                type="button"
+                class="w-100 d-flex align-items-center justify-content-between text-start border-0 bg-white fw-semibold"
+                style="
+                  padding: 18px 20px;
+                  color: var(--iccict-primary-dark);
+                  cursor: pointer;
+                "
+                onclick="
+                  const body_new=this.nextElementSibling;
+                  const icon_new=this.querySelector('[data-icon]');
+                  const open_new = body_new.style.display==='block';
+                  document.querySelectorAll('.faq-body').forEach(b=>{b.style.display='none'; b.style.maxHeight='0px';});
+                  document.querySelectorAll('[data-icon]').forEach(i=>{i.style.transform='rotate(0deg)';});
+                  if(!open_new){ body_new.style.display='block'; body_new.style.maxHeight='800px'; icon_new.style.transform='rotate(180deg)'; }
+                "
+              >
+                <span>Who is eligible to participate in the IRIEA Research Awards?</span>
+                <span
+                  data-icon
+                  class="d-inline-flex align-items-center justify-content-center"
+                  style="
+                    width: 34px;
+                    height: 34px;
+                    border-radius: 12px;
+                    background: var(--iccict-soft);
+                    transition: transform 0.2s ease;
+                  "
+                >
+                  <span style="display: block; transform: translateY(-1px)"
+                    >⌄</span
+                  >
+                </span>
+              </button>
+              <div
+                class="faq-body"
+                style="
+                  display: none;
+                  max-height: 0px;
+                  overflow: hidden;
+                  transition: max-height 0.25s ease;
+                "
+              >
+                <div
+                  style="padding: 18px 20px; color: #334155; line-height: 1.8"
+                >
+                  Researchers, academicians, scientists, faculty members,
+                  research scholars, and institutions with significant
+                  contributions to research, innovation, education, or academic
+                  leadership are eligible to apply or be nominated.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-4 shadow-sm mb-3 overflow-hidden"
+              style="border: 1px solid rgba(15, 23, 42, 0.06)"
+            >
+              <button
+                type="button"
+                class="w-100 d-flex align-items-center justify-content-between text-start border-0 bg-white fw-semibold"
+                style="
+                  padding: 18px 20px;
+                  color: var(--iccict-primary-dark);
+                  cursor: pointer;
+                "
+                onclick="
+                  const body_n=this.nextElementSibling;
+                  const icon_n=this.querySelector('[data-icon]');
+                  const open_n = body_n.style.display==='block';
+                  document.querySelectorAll('.faq-body').forEach(b=>{b.style.display='none'; b.style.maxHeight='0px';});
+                  document.querySelectorAll('[data-icon]').forEach(i=>{i.style.transform='rotate(0deg)';});
+                  if(!open_n){ body_n.style.display='block'; body_n.style.maxHeight='800px'; icon_n.style.transform='rotate(180deg)'; }
+                "
+              >
+                <span>How are the award recipients selected?</span>
+                <span
+                  data-icon
+                  class="d-inline-flex align-items-center justify-content-center"
+                  style="
+                    width: 34px;
+                    height: 34px;
+                    border-radius: 12px;
+                    background: var(--iccict-soft);
+                    transition: transform 0.2s ease;
+                  "
+                >
+                  <span style="display: block; transform: translateY(-1px)"
+                    >⌄</span
+                  >
+                </span>
+              </button>
+              <div
+                class="faq-body"
+                style="
+                  display: none;
+                  max-height: 0px;
+                  overflow: hidden;
+                  transition: max-height 0.25s ease;
+                "
+              >
+                <div
+                  style="padding: 18px 20px; color: #334155; line-height: 1.8"
+                >
+                  Award recipients are selected by an independent panel of
+                  academic and research experts based on defined evaluation
+                  criteria, including research impact, originality, contribution
+                  to the field, publications, and societal relevance.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-4 shadow-sm mb-3 overflow-hidden"
+              style="border: 1px solid rgba(15, 23, 42, 0.06)"
+            >
+              <button
+                type="button"
+                class="w-100 d-flex align-items-center justify-content-between text-start border-0 bg-white fw-semibold"
+                style="
+                  padding: 18px 20px;
+                  color: var(--iccict-primary-dark);
+                  cursor: pointer;
+                "
+                onclick="
+                  const body_next=this.nextElementSibling;
+                  const icon_next=this.querySelector('[data-icon]');
+                  const open_next = body_next.style.display==='block';
+                  document.querySelectorAll('.faq-body').forEach(b=>{b.style.display='none'; b.style.maxHeight='0px';});
+                  document.querySelectorAll('[data-icon]').forEach(i=>{i.style.transform='rotate(0deg)';});
+                  if(!open_next){ body_next.style.display='block'; body_next.style.maxHeight='800px'; icon_next.style.transform='rotate(180deg)'; }
+                "
+              >
+                <span>When and where will the award ceremony take place?</span>
+                <span
+                  data-icon
+                  class="d-inline-flex align-items-center justify-content-center"
+                  style="
+                    width: 34px;
+                    height: 34px;
+                    border-radius: 12px;
+                    background: var(--iccict-soft);
+                    transition: transform 0.2s ease;
+                  "
+                >
+                  <span style="display: block; transform: translateY(-1px)"
+                    >⌄</span
+                  >
+                </span>
+              </button>
+              <div
+                class="faq-body"
+                style="
+                  display: none;
+                  max-height: 0px;
+                  overflow: hidden;
+                  transition: max-height 0.25s ease;
+                "
+              >
+                <div
+                  style="padding: 18px 20px; color: #334155; line-height: 1.8"
+                >
+                  The award ceremony will be conducted as part of an
+                  international event hosted by IBIEA. Final dates and venue
+                  details will be shared with shortlisted candidates through
+                  official communication channels.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-4 shadow-sm overflow-hidden"
+              style="border: 1px solid rgba(15, 23, 42, 0.06)"
+            >
+              <button
+                type="button"
+                class="w-100 d-flex align-items-center justify-content-between text-start border-0 bg-white fw-semibold"
+                style="
+                  padding: 18px 20px;
+                  color: var(--iccict-primary-dark);
+                  cursor: pointer;
+                "
+                onclick="
+                  const body=this.nextElementSibling;
+                  const icon=this.querySelector('[data-icon]');
+                  const open = body.style.display==='block';
+                  document.querySelectorAll('.faq-body').forEach(b=>{b.style.display='none'; b.style.maxHeight='0px';});
+                  document.querySelectorAll('[data-icon]').forEach(i=>{i.style.transform='rotate(0deg)';});
+                  if(!open){ body.style.display='block'; body.style.maxHeight='800px'; icon.style.transform='rotate(180deg)'; }
+                "
+              >
+                <span>Can I nominate someone else for an award?</span>
+                <span
+                  data-icon
+                  class="d-inline-flex align-items-center justify-content-center"
+                  style="
+                    width: 34px;
+                    height: 34px;
+                    border-radius: 12px;
+                    background: var(--iccict-soft);
+                    transition: transform 0.2s ease;
+                  "
+                >
+                  <span style="display: block; transform: translateY(-1px)"
+                    >⌄</span
+                  >
+                </span>
+              </button>
+              <div
+                class="faq-body"
+                style="
+                  display: none;
+                  max-height: 0px;
+                  overflow: hidden;
+                  transition: max-height 0.25s ease;
+                "
+              >
+                <div
+                  style="padding: 18px 20px; color: #334155; line-height: 1.8"
+                >
+                  Yes, self-nominations and third-party nominations are both
+                  accepted, provided the nominee meets the eligibility criteria
+                  and submits the required supporting documents.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-5 cta-dark">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="fw-bold mb-2" style="color: #ffffff; font-size: 34px">
+            Ready to Nominate?
+          </h2>
+
+          <p
+            class="mb-4"
+            style="color: rgba(255, 255, 255, 0.85); font-size: 14px"
+          >
+            Join us in celebrating the pioneers of innovation and excellence in
+            business globally.
+          </p>
+
+          <a
+            href="#nominate"
+            class="btn fw-semibold px-4 py-2"
+            style="
+              background: #ffffff;
+              color: var(--iccict-primary-dark);
+              border-radius: 10px;
+              border: none;
+            "
+          >
+            Submit Nomination
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+
+    <script>
+      if (window.AOS)
+        AOS.init({
+          duration: 800,
+          once: false,
+          offset: 80,
+          easing: "ease-in-out",
+        });
+    </script>
+    <script>
+      (function () {
+        const form = document.getElementById("nominationForm");
+
+        const el = (id) => document.getElementById(id);
+        const showErr = (key, msg) => {
+          const box = el("err_" + key);
+          if (!box) return;
+          box.style.display = msg ? "block" : "none";
+          box.textContent = msg || "";
+        };
+
+        const emailRegex =
+          /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$/;
+        const phoneRegex = /^[0-9+\-\s()]{8,20}$/;
+
+        const required = [
+          "fullName",
+          "designation",
+          "orgName",
+          "industry",
+          "country",
+          "email",
+          "phone",
+          "awardCategory",
+          "achievements",
+        ];
+
+        const words = (text) => {
+          const t = (text || "").trim();
+          if (!t) return 0;
+          return t.split(/\s+/).filter(Boolean).length;
+        };
+
+        // word counter
+        const achievementsEl = el("achievements");
+        const wordCountEl = el("wordCount");
+        achievementsEl.addEventListener("input", () => {
+          wordCountEl.textContent = words(achievementsEl.value) + " words";
+          validateAll(false);
+        });
+
+        // file preview
+        const fileInput = el("supportFile");
+        const fileMeta = el("fileMeta");
+        const previewWrap = el("filePreviewWrap");
+        const imgPreview = el("imgPreview");
+        const pdfPreview = el("pdfPreview");
+
+        const resetPreview = () => {
+          previewWrap.style.display = "none";
+          imgPreview.style.display = "none";
+          pdfPreview.style.display = "none";
+          imgPreview.src = "";
+          pdfPreview.src = "";
+          fileMeta.style.display = "none";
+          fileMeta.textContent = "";
+        };
+
+        fileInput.addEventListener("change", () => {
+          resetPreview();
+          showErr("supportFile", "");
+
+          const f = fileInput.files && fileInput.files[0];
+          if (!f) {
+            validateAll(false);
+            return;
+          }
+
+          // allow: pdf + images + doc/docx
+          const ok =
+            f.type === "application/pdf" ||
+            f.type === "application/msword" ||
+            f.type ===
+              "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ||
+            f.type.startsWith("image/") ||
+            /\.(pdf|png|jpg|jpeg|webp|doc|docx)$/i.test(f.name);
+
+          if (!ok) {
+            showErr(
+              "supportFile",
+              "Only PDF, DOC, DOCX, or image files are allowed (max 10MB)."
+            );
+            fileInput.value = "";
+            validateAll(false);
+            return;
+          }
+
+          fileMeta.style.display = "block";
+          fileMeta.textContent = `Selected: ${f.name} (${Math.round(
+            f.size / 1024
+          )} KB)`;
+
+          const url = URL.createObjectURL(f);
+          previewWrap.style.display = "block";
+
+          if (f.type === "application/pdf" || /\.pdf$/i.test(f.name)) {
+            pdfPreview.style.display = "block";
+            pdfPreview.src = url;
+          } else if (
+            f.type.startsWith("image/") ||
+            /\.(png|jpg|jpeg|webp)$/i.test(f.name)
+          ) {
+            imgPreview.style.display = "block";
+            imgPreview.src = url;
+          } else {
+            // doc/docx or other allowed non-preview types: just show file meta, no preview
+          }
+
+          validateAll(false);
+        });
+
+        // enable/disable button
+        const submitBtn = el("submitBtn");
+        const terms = el("terms");
+
+        const validateField = (id, showMessages = true) => {
+          const v = (el(id).value || "").trim();
+
+          // required check
+          if (required.includes(id) && !v) {
+            if (showMessages) showErr(id, "This field is required.");
+            return false;
+          }
+
+          // specific validations
+          if (id === "email" && v && !emailRegex.test(v)) {
+            if (showMessages)
+              showErr(id, "Please enter a valid email address.");
+            return false;
+          }
+
+          if (id === "phone" && v && !phoneRegex.test(v)) {
+            if (showMessages) showErr(id, "Please enter a valid phone number.");
+            return false;
+          }
+
+          if (id === "achievements" && v) {
+            const wc = words(v);
+            if (wc < 20 || wc > 500) {
+              if (showMessages)
+                showErr(id, "Please write between 20 and 500 words.");
+              return false;
+            }
+          }
+
+          if (showMessages) showErr(id, "");
+          return true;
+        };
+
+        const validateTerms = (showMessages = true) => {
+          if (!terms.checked) {
+            if (showMessages)
+              showErr("terms", "Please accept the terms to continue.");
+            return false;
+          }
+          if (showMessages) showErr("terms", "");
+          return true;
+        };
+
+        const validateAll = (showMessages = true) => {
+          let ok = true;
+
+          required.forEach((id) => {
+            if (!validateField(id, showMessages)) ok = false;
+          });
+
+          if (!validateTerms(showMessages)) ok = false;
+
+          submitBtn.disabled = !ok;
+          submitBtn.style.background = ok ? "#6d6458" : "#9a8f80";
+          submitBtn.style.color = ok ? "#fff" : "#1b1b1b";
+
+          return ok;
+        };
+
+        // validate on typing
+        required.forEach((id) => {
+          const node = el(id);
+          node.addEventListener("input", () => validateAll(false));
+          node.addEventListener("blur", () => validateAll(true));
+          if (node.tagName === "SELECT") {
+            node.addEventListener("change", () => validateAll(true));
+          }
+        });
+
+        terms.addEventListener("change", () => validateAll(true));
+
+        // initial state
+        wordCountEl.textContent = "0 words";
+        validateAll(false);
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const ok = validateAll(true);
+          if (!ok) return;
+
+          const fd = new FormData();
+          fd.append("fullName", el("fullName").value.trim());
+          fd.append("designation", el("designation").value.trim());
+          fd.append("orgName", el("orgName").value.trim());
+          fd.append("industry", el("industry").value.trim());
+          fd.append("country", el("country").value.trim());
+          fd.append("email", el("email").value.trim());
+          fd.append("phone", el("phone").value.trim());
+          fd.append("awardCategory", el("awardCategory").value.trim());
+          fd.append("achievements", el("achievements").value.trim());
+          fd.append("impact", el("impact").value.trim());
+          fd.append("recognitions", el("recognitions").value.trim());
+
+          const f = fileInput.files && fileInput.files[0];
+          if (f) {
+            fd.append("supportFile", f); // IMPORTANT: name must be 'supportFile'
+          }
+
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Submitting...";
+
+          const API_URL = "https://icaicn-api.onrender.com/api";
+          // const API_URL = "http://localhost:8000/api";
+
+          try {
+            const res = await fetch(
+              `${API_URL}/awards/nomination`,
+              {
+                method: "POST",
+                body: fd,
+              }
+            );
+            const json = await res.json();
+
+            if (!res.ok) {
+              const msg = json?.message || "Submission failed";
+              console.error("Nomination error:", json);
+              alert(msg);
+            } else {
+              // backend returns the saved row, including supportFileUrl (Cloudinary URL)
+              console.log("Nomination saved:", json.data);
+              alert("Nomination submitted successfully!");
+              form.reset();
+              resetPreview();
+              wordCountEl.textContent = "0 words";
+              validateAll(false);
+            }
+          } catch (err) {
+            console.error("Network error:", err);
+            alert("Network error submitting the nomination.");
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Submit Nomination";
+          }
+        });
+      })();
+    </script>
+
+ <!--===== FOOTER AREA STARTS =======-->
+    <div class="footer4-sertion-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-logo-area">
+              <a href="index.html">
+                <div class="site-logo">
+                  <img
+                    src="assets/img/sponsors_logo/footer_logo.png"
+                    alt="logo"
+                  />
+                </div>
+              </a>
+              <div class="space16"></div>
+              <p>
+                We are committed to provide the Intersection of AI & Communication Networks
+              </p>
+              <div class="space24"></div>
+              <!-- <ul>
+							<li>
+								<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="fa-brands fa-instagram"></i></a>
+							</li>
+							<li>
+								<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+							</li>
+							<li>
+								<a href="#" class="m-0"><i class="fa-brands fa-pinterest-p"></i></a>
+							</li>
+						</ul> -->
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <div class="link-content">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="about.html">Conference</a></li>
+                <li><a href="features.html">Features</a></li>
+                <!-- <li><a href="sponsors.html">Events</a></li> -->
+                <li><a href="register.html">Register</a></li>
+                <li><a href="sponsors.html">Exhibitors</a></li>
+                <li><a href="venue.html">Venue</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="link-content2">
+              <h3>Contact Us</h3>
+              <ul>
+                <li>
+                  <a
+                    href="tel:+91-9540111312"
+                    target="_blank"
+                    style="display: flex"
+                  >
+                    <img src="assets/img/icons/phn1.svg" alt="" />
+                    <div class="">
+                      <span>+91-9540111312</span> <br />
+                      <!-- <span style="margin-right: 10px;"></span> -->
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank"
+                    ><img src="assets/img/icons/location1.svg" alt="" />New Delhi, India (To be confirmed)
+                  </a>
+                </li>
+                <li>
+				  <a href="mailto:icaicn.traveon@gmail.com" target="_blank"
+                    ><img
+                      src="assets/img/icons/mail1.svg"
+                      alt=""
+					/>icaicn.traveon@gmail.com</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.icaicn.traveon.in" target="_blank"
+                    ><img
+                      src="assets/img/icons/world1.svg"
+                      alt=""
+                    />www.icaicn.traveon.in</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-social-box">
+              <h3>Delhi Visuals</h3>
+              <div class="space12"></div>
+              <div class="row">
+                <div class="col-lg-4 col-md-4 col-4">
+                  <div class="img1">
+                    <img
+                      src="https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/5c/4e/0f/32/85/v1_E10/E1083AGJ.jpg?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=2a62dc0e9272c0049ae3d399b9c9119e9626da28e094da96ba935c51bc9c60f0"
+                      alt=""
+                    />
+                    <div class="icons">
+                      <a href="https://www.instagram.com/traveonventures/"
+                        ><i class="fa-brands fa-instagram"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-4">
+                  <div class="img1">
+                    <img
+                      src="https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/7e/eb/3f/ba/a2/v1_E10/E108358M.jpg?w=800&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=f5b35f8a53b76692bd33d3e26008d72b4a62cfb13b903a09a14aa19622df4280"
+                      alt=""
+                    />
+                    <div class="icons">
+                      <a href="https://www.instagram.com/traveonventures/"
+                        ><i class="fa-brands fa-instagram"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-4">
+                  <div class="img1">
+                    <img
+                      src="https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/b6/c5/7e/f1/f8/v1_E10/E10835U2.jpg?w=800&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=e6d5d06edd17ec76bd0a3f16ebf22f42e07c8b8f3f77acaa6685dc6ec307bcbe"
+                      alt=""
+                    />
+                    <div class="icons">
+                      <a href="https://www.instagram.com/traveonventures/"
+                        ><i class="fa-brands fa-instagram"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-4">
+                  <div class="img1">
+                    <img
+                      src="https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/84/9c/3b/51/8a/v1_E10/E105F746.jpg?w=800&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=4dc9dc164068c6bcc788ce158af74a39f2210e817a6f3ce1929eb48c57699c40"
+                      alt=""
+                    />
+                    <div class="icons">
+                      <a href="https://www.instagram.com/traveonventures/"
+                        ><i class="fa-brands fa-instagram"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-4">
+                  <div class="img1">
+                    <img
+                      src="https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/10/dd/45/fa/16/v1_E11/E117X489.jpg?w=800&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=72b33c526abc7260a13e96688eb11c017ca177eb1002b640a960a75e6bf113a2"
+                      alt=""
+                    />
+                    <div class="icons">
+                      <a href="https://www.instagram.com/traveonventures/"
+                        ><i class="fa-brands fa-instagram"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-4">
+                  <div class="img1">
+                    <img
+                      src="https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/8c/8f/76/2a/09/v1_E10/E10A3UWF.jpg?w=800&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=30938da8db9b9445a61f45e5e367981c009ebff386a0530dd506a930dcbae460"
+                      alt=""
+                    />
+                    <div class="icons">
+                      <a href="https://www.instagram.com/traveonventures/"
+                        ><i class="fa-brands fa-instagram"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space60"></div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="copyright">
+              <p>
+                &copy; Copyright 2026 - Traveon Ventures LLP. All Right Reserved
+              </p>
+            </div>
+            <div
+              class="privacy"
+              style="display: flex; justify-content: end; gap: 20px"
+            >
+              <a href="event-policy.html">Event Policies</a> |
+              <a href="code-of-conduct.html">Code Of Conduct</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--===== FOOTER AREA ENDS =======-->
+  </body>
+</html>

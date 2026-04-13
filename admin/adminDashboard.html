@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -658,9 +658,7 @@
                 </div>
                 <div class="card-body">
                   <div class="mb-2">
-                    <label class="form-label"
-                      >Conference Registration Form URL:</label
-                    >
+                    <label class="form-label">Conference Registration Form URL:</label>
                     <div class="input-group input-group-sm">
                       <input
                         type="text"
@@ -1071,7 +1069,7 @@
       let currentEditType = null;
       let committeeMembers = [];
       // const API_BASE_URL = 'https://iccict-backend-production.up.railway.app/api';
-      const API_BASE_URL = "https://icaicn-be.onrender.com/api";
+      const API_BASE_URL = "https://iccict-api.onrender.com/api";
       // const API_BASE_URL = 'http://localhost:5000/api';
 
       // Helper function to get review status badge
@@ -1117,7 +1115,7 @@
               headers: {
                 Authorization: `Bearer ${token}`,
               },
-            },
+            }
           );
 
           if (response.ok) {
@@ -1148,7 +1146,7 @@
 
         // Populate committee checkboxes
         const checkboxContainer = document.getElementById(
-          "committeeCheckboxes",
+          "committeeCheckboxes"
         );
         checkboxContainer.innerHTML = "";
 
@@ -1174,10 +1172,10 @@
           .getElementById("sendToAllCommittee")
           .addEventListener("change", function () {
             const memberChecks = document.querySelectorAll(
-              ".committee-member-check",
+              ".committee-member-check"
             );
             const container = document.getElementById(
-              "committeeSelectContainer",
+              "committeeSelectContainer"
             );
 
             if (this.checked) {
@@ -1188,27 +1186,27 @@
           });
 
         new bootstrap.Modal(
-          document.getElementById("sendToCommitteeModal"),
+          document.getElementById("sendToCommitteeModal")
         ).show();
       }
 
       // Send speaker to committee
       async function sendSpeakerToCommittee() {
         const speakerId = document.getElementById(
-          "sendToCommitteeSpeakerId",
+          "sendToCommitteeSpeakerId"
         ).value;
         const sendToAll = document.getElementById("sendToAllCommittee").checked;
 
         let committeeIds = [];
         if (!sendToAll) {
           const checkedBoxes = document.querySelectorAll(
-            ".committee-member-check:checked",
+            ".committee-member-check:checked"
           );
           committeeIds = Array.from(checkedBoxes).map((cb) => cb.value);
 
           if (committeeIds.length === 0) {
             alert(
-              'Please select at least one committee member or choose "Send to All"',
+              'Please select at least one committee member or choose "Send to All"'
             );
             return;
           }
@@ -1228,19 +1226,19 @@
                 committeeIds: sendToAll ? [] : committeeIds,
                 sendToAll: sendToAll,
               }),
-            },
+            }
           );
 
           const result = await response.json();
           if (response.ok) {
             alert(result.message);
             bootstrap.Modal.getInstance(
-              document.getElementById("sendToCommitteeModal"),
+              document.getElementById("sendToCommitteeModal")
             ).hide();
             loadSpeakers(); // Reload speakers to update status
           } else {
             throw new Error(
-              result.message || "Failed to send speaker to committee",
+              result.message || "Failed to send speaker to committee"
             );
           }
         } catch (error) {
@@ -1263,17 +1261,17 @@
         document.getElementById("speakerStatusNotes").value = "";
 
         new bootstrap.Modal(
-          document.getElementById("updateSpeakerStatusModal"),
+          document.getElementById("updateSpeakerStatusModal")
         ).show();
       }
 
       // Update speaker review status
       async function updateSpeakerReviewStatus() {
         const speakerId = document.getElementById(
-          "updateStatusSpeakerId",
+          "updateStatusSpeakerId"
         ).value;
         const reviewStatus = document.getElementById(
-          "speakerReviewStatus",
+          "speakerReviewStatus"
         ).value;
         const notes = document.getElementById("speakerStatusNotes").value;
 
@@ -1301,19 +1299,19 @@
                 reviewStatus: reviewStatus,
                 notes: notes,
               }),
-            },
+            }
           );
 
           const result = await response.json();
           if (response.ok) {
             alert("Speaker review status updated successfully");
             bootstrap.Modal.getInstance(
-              document.getElementById("updateSpeakerStatusModal"),
+              document.getElementById("updateSpeakerStatusModal")
             ).hide();
             loadSpeakers(); // Reload speakers to update status
           } else {
             throw new Error(
-              result.message || "Failed to update speaker status",
+              result.message || "Failed to update speaker status"
             );
           }
         } catch (error) {
@@ -1335,7 +1333,7 @@
               headers: {
                 Authorization: `Bearer ${token}`,
               },
-            },
+            }
           );
 
           if (!response.ok) {
@@ -1392,7 +1390,7 @@
                         .map((s) =>
                           s
                             .replace(/_/g, " ")
-                            .replace(/\b\w/g, (l) => l.toUpperCase()),
+                            .replace(/\b\w/g, (l) => l.toUpperCase())
                         )
                         .join(", ")}</td></tr>`
                     : ""
@@ -1404,8 +1402,8 @@
 							<table class="table table-sm">
 								<tr><td><strong>Name:</strong></td><td>${speaker.name || "-"}</td></tr>
 								<tr><td><strong>Email:</strong></td><td><a href="mailto:${speaker.email}">${
-                  speaker.email || "-"
-                }</a></td></tr>
+            speaker.email || "-"
+          }</a></td></tr>
 								<tr><td><strong>Phone:</strong></td><td>${speaker.phone || "-"}</td></tr>
 								<tr><td><strong>Institution:</strong></td><td>${
                   speaker.institutionName || "-"
@@ -1449,7 +1447,7 @@
 												<td>${coAuthor.orcidId || "-"}</td>
 												<td>${coAuthor.corresponding ? "Yes" : "No"}</td>
 											</tr>
-										`,
+										`
                       )
                       .join("")}
 									</tbody>
@@ -1486,16 +1484,16 @@
 							<h6 class="text-primary mb-3">Review Information</h6>
 							<table class="table table-sm">
 								<tr><td><strong>Status:</strong></td><td>${getReviewStatusBadge(
-                  speaker.reviewStatus,
+                  speaker.reviewStatus
                 )}</td></tr>
 								<tr><td><strong>Sent to Committee:</strong></td><td>${
                   speaker.sentToCommittee ? "Yes" : "No"
                 }</td></tr>
 								<tr><td><strong>Submitted:</strong></td><td>${new Date(
-                  speaker.createdAt,
+                  speaker.createdAt
                 ).toLocaleDateString()}</td></tr>
 								<tr><td><strong>Last Updated:</strong></td><td>${new Date(
-                  speaker.updatedAt,
+                  speaker.updatedAt
                 ).toLocaleDateString()}</td></tr>
 							</table>
 						</div>
@@ -1523,10 +1521,10 @@
                         ? "check text-success"
                         : "times text-danger"
                     }"></i> Preprint Policy ${
-                      speaker.preprintUrl
-                        ? `(<a href="${speaker.preprintUrl}" target="_blank">View</a>)`
-                        : ""
-                    }</li>
+            speaker.preprintUrl
+              ? `(<a href="${speaker.preprintUrl}" target="_blank">View</a>)`
+              : ""
+          }</li>
 										<li><i class="fas fa-${
                       speaker.conflictOfInterest
                         ? "check text-success"
@@ -1572,7 +1570,7 @@
           document.getElementById("paperSubmissionDetailsContent").innerHTML =
             content;
           new bootstrap.Modal(
-            document.getElementById("paperSubmissionDetailsModal"),
+            document.getElementById("paperSubmissionDetailsModal")
           ).show();
         } catch (error) {
           console.error("Error loading paper submission details:", error);
@@ -1651,17 +1649,20 @@
           })
           .then((data) => {
             document.getElementById("adminEmail").textContent = data.email;
-            document.getElementById("referralCodeDisplay").textContent =
-              `Code: ${data.referralCode}`;
+            document.getElementById(
+              "referralCodeDisplay"
+            ).textContent = `Code: ${data.referralCode}`;
             document.getElementById("referralCodeInput").value =
               data.referralCode;
 
             // Set up referral links
             const baseUrl = window.location.origin;
-            document.getElementById("confReferralLink").value =
-              `${baseUrl}/register.html?ref=${data.referralCode}`;
-            document.getElementById("speakerReferralLink").value =
-              `${baseUrl}/paper.html?ref=${data.referralCode}`;
+            document.getElementById(
+              "confReferralLink"
+            ).value = `${baseUrl}/register.html?ref=${data.referralCode}`;
+            document.getElementById(
+              "speakerReferralLink"
+            ).value = `${baseUrl}/paper.html?ref=${data.referralCode}`;
           })
           .catch((error) => {
             console.error("Auth error:", error);
@@ -2035,7 +2036,7 @@
                     if (data && data.length > 50) {
                       return `<span title="${data}">${data.substring(
                         0,
-                        50,
+                        50
                       )}...</span>`;
                     }
                     return data || "-";
@@ -2224,7 +2225,7 @@
                     if (data && data.length > 50) {
                       return `<span title="${data}">${data.substring(
                         0,
-                        50,
+                        50
                       )}...</span>`;
                     }
                     return data || "-";
@@ -2433,14 +2434,15 @@
           .then((response) => {
             if (!response.ok) {
               throw new Error(
-                `HTTP ${response.status}: ${response.statusText}`,
+                `HTTP ${response.status}: ${response.statusText}`
               );
             }
             return response.json();
           })
           .then((data) => {
-            document.getElementById("editModalTitle").textContent =
-              `Edit ${type.slice(0, -1)}`;
+            document.getElementById(
+              "editModalTitle"
+            ).textContent = `Edit ${type.slice(0, -1)}`;
 
             let formHTML = "";
             switch (type) {
@@ -2725,19 +2727,19 @@
 
         fetch(
           `${API_BASE_URL}/admin/${currentEditType}/${currentEditId}`,
-          requestOptions,
+          requestOptions
         )
           .then((response) => {
             if (!response.ok) {
               throw new Error(
-                `HTTP ${response.status}: ${response.statusText}`,
+                `HTTP ${response.status}: ${response.statusText}`
               );
             }
             return response.json();
           })
           .then((result) => {
             bootstrap.Modal.getInstance(
-              document.getElementById("editModal"),
+              document.getElementById("editModal")
             ).hide();
             alert("Record updated successfully");
 
@@ -2767,7 +2769,7 @@
       function deleteRecord(type, id) {
         if (
           !confirm(
-            "Are you sure you want to delete this record? This action cannot be undone.",
+            "Are you sure you want to delete this record? This action cannot be undone."
           )
         ) {
           return;
@@ -2784,7 +2786,7 @@
           .then((response) => {
             if (!response.ok) {
               throw new Error(
-                `HTTP ${response.status}: ${response.statusText}`,
+                `HTTP ${response.status}: ${response.statusText}`
               );
             }
             return response.json();
@@ -2829,7 +2831,7 @@
             const csvContent = convertToCSV(data, type);
             downloadCSV(
               csvContent,
-              `${type}_export_${new Date().toISOString().split("T")[0]}.csv`,
+              `${type}_export_${new Date().toISOString().split("T")[0]}.csv`
             );
           })
           .catch((error) => {
@@ -2911,7 +2913,7 @@
           .then((response) => {
             if (!response.ok) {
               throw new Error(
-                `HTTP ${response.status}: ${response.statusText}`,
+                `HTTP ${response.status}: ${response.statusText}`
               );
             }
             return response.json();
@@ -2919,7 +2921,7 @@
           .then((result) => {
             const speaker = result.keynoteSpeaker;
             const modalContent = document.getElementById(
-              "keynoteSpeakerDetailsContent",
+              "keynoteSpeakerDetailsContent"
             );
             modalContent.dataset.speakerId = speaker.id;
 
@@ -3065,15 +3067,15 @@
 						<div class="col-12">
 							<h5><i class="fas fa-clock me-2"></i>Registration Information</h5>
 							<p><strong>Registered:</strong> ${new Date(
-                speaker.createdAt,
+                speaker.createdAt
               ).toLocaleDateString()} at ${new Date(
-                speaker.createdAt,
-              ).toLocaleTimeString()}</p>
+              speaker.createdAt
+            ).toLocaleTimeString()}</p>
 							<p><strong>Last Updated:</strong> ${new Date(
-                speaker.updatedAt,
+                speaker.updatedAt
               ).toLocaleDateString()} at ${new Date(
-                speaker.updatedAt,
-              ).toLocaleTimeString()}</p>
+              speaker.updatedAt
+            ).toLocaleTimeString()}</p>
 							${
                 speaker.referredBy
                   ? `<p><strong>Referred by Admin:</strong> ${speaker.referredBy.email}</p>`
@@ -3083,7 +3085,7 @@
 					</div>
 				`;
             new bootstrap.Modal(
-              document.getElementById("keynoteSpeakerDetailsModal"),
+              document.getElementById("keynoteSpeakerDetailsModal")
             ).show();
           })
           .catch((error) => {
@@ -3094,17 +3096,17 @@
 
       function showStatusUpdateModal() {
         const speakerId = document.getElementById(
-          "keynoteSpeakerDetailsContent",
+          "keynoteSpeakerDetailsContent"
         ).dataset.speakerId;
         document.getElementById("statusUpdateSpeakerId").value = speakerId;
         new bootstrap.Modal(
-          document.getElementById("statusUpdateModal"),
+          document.getElementById("statusUpdateModal")
         ).show();
       }
 
       function updateKeynoteSpeakerStatus() {
         const speakerId = document.getElementById(
-          "statusUpdateSpeakerId",
+          "statusUpdateSpeakerId"
         ).value;
         const newStatus = document.getElementById("newStatus").value;
         const statusNotes = document.getElementById("statusNotes").value;
@@ -3122,7 +3124,7 @@
           .then((response) => {
             if (!response.ok) {
               throw new Error(
-                `HTTP ${response.status}: ${response.statusText}`,
+                `HTTP ${response.status}: ${response.statusText}`
               );
             }
             return response.json();
@@ -3131,7 +3133,7 @@
             alert("Keynote speaker status updated successfully!");
             loadKeynoteSpeakers(); // Reload the table to show updated status
             new bootstrap.Modal(
-              document.getElementById("statusUpdateModal"),
+              document.getElementById("statusUpdateModal")
             ).hide();
           })
           .catch((error) => {
@@ -3196,7 +3198,7 @@
                     if (data && data.length > 50) {
                       return `<span title="${data}">${data.substring(
                         0,
-                        50,
+                        50
                       )}...</span>`;
                     }
                     return data || "-";
@@ -3211,7 +3213,7 @@
                     if (data && data.length > 100) {
                       return `<span title="${data}">${data.substring(
                         0,
-                        100,
+                        100
                       )}...</span>`;
                     }
                     return data || "-";
@@ -3309,14 +3311,14 @@
 							<table class="table table-sm">
 								<tr><td><strong>Name:</strong></td><td>${contact.name}</td></tr>
 								<tr><td><strong>Email:</strong></td><td><a href="mailto:${contact.email}">${
-                  contact.email
-                }</a></td></tr>
+              contact.email
+            }</a></td></tr>
 								<tr><td><strong>Phone:</strong></td><td><a href="tel:${contact.phone}">${
-                  contact.phone
-                }</a></td></tr>
+              contact.phone
+            }</a></td></tr>
 								<tr><td><strong>Subject:</strong></td><td>${contact.subject}</td></tr>
 								<tr><td><strong>Date:</strong></td><td>${new Date(
-                  contact.createdAt,
+                  contact.createdAt
                 ).toLocaleString()}</td></tr>
 							</table>
 						</div>
@@ -3368,7 +3370,7 @@
       function deleteContact(contactId) {
         if (
           !confirm(
-            "Are you sure you want to delete this contact query? This action cannot be undone.",
+            "Are you sure you want to delete this contact query? This action cannot be undone."
           )
         )
           return;
@@ -3384,7 +3386,7 @@
           .then((response) => {
             if (!response.ok) {
               throw new Error(
-                `HTTP ${response.status}: ${response.statusText}`,
+                `HTTP ${response.status}: ${response.statusText}`
               );
             }
             return response.json();

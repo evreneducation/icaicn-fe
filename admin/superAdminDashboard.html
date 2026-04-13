@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -2216,7 +2216,7 @@
       // const API_BASE = 'https://iccict-backend-production.up.railway.app/api';
       // const API_BASE_RE = 'http://localhost:5000/api';
       // const API_BASE = 'http://localhost:8000/api';
-      const API_BASE = "https://icaicn-be.onrender.com/api";
+      const API_BASE = "https://iccict-api.onrender.com/api";
       let currentData = {};
 
       // Check authentication on page load
@@ -2227,7 +2227,7 @@
           return;
         }
         loadDashboardData();
-        refreshAllData();
+				refreshAllData();
       });
 
       // Utility Functions
@@ -2626,7 +2626,7 @@
 				<span class="badge bg-primary">${
           Array.isArray(admin.referredUsers)
             ? admin.referredUsers.length
-            : (admin.referredUsersCount ?? admin.referredCount ?? 0)
+            : admin.referredUsersCount ?? admin.referredCount ?? 0
         }</span>
 
 			</div>
@@ -2641,7 +2641,7 @@
                       .map(
                         (user) => `
  											<li class="small">${user.name} (${user.email})</li>
- 										`,
+ 										`
                       )
                       .join("")}
  									</ul>
@@ -2677,11 +2677,11 @@
           if (response.ok) {
             showAlert(
               `Admin created successfully! Referral Code: ${result.referralCode}`,
-              "success",
+              "success"
             );
             document.getElementById("createAdminForm").reset();
             bootstrap.Modal.getInstance(
-              document.getElementById("createAdminModal"),
+              document.getElementById("createAdminModal")
             ).hide();
             refreshAllData();
           } else {
@@ -2781,7 +2781,7 @@
             e.preventDefault();
             const id = link.getAttribute("data-admin-id");
             const email = decodeURIComponent(
-              link.getAttribute("data-admin-email") || "",
+              link.getAttribute("data-admin-email") || ""
             );
             requestDeleteAdmin(id, email);
           });
@@ -2810,7 +2810,7 @@
             {
               method: "DELETE",
               headers: getAuthHeaders(),
-            },
+            }
           );
 
           if (!resp.ok) {
@@ -2833,7 +2833,7 @@
           // Toast success
           if (deleteAdminToast) {
             const body = document.querySelector(
-              "#deleteAdminToast .toast-body",
+              "#deleteAdminToast .toast-body"
             );
             if (body) body.textContent = "Admin deleted successfully.";
             deleteAdminToast.show();
@@ -2978,10 +2978,10 @@
                   data.toLowerCase() === "online"
                     ? "bg-info"
                     : data.toLowerCase() === "in-person"
-                      ? "bg-success"
-                      : data.toLowerCase() === "hybrid"
-                        ? "bg-primary"
-                        : "bg-secondary";
+                    ? "bg-success"
+                    : data.toLowerCase() === "hybrid"
+                    ? "bg-primary"
+                    : "bg-secondary";
 
                 return `<span class="badge ${badgeClass}">${data}</span>`;
               },
@@ -3068,7 +3068,7 @@
 
       function viewPaymentReceipt() {
         const receiptUrl = document.getElementById(
-          "editRegPaymentReceiptUrl",
+          "editRegPaymentReceiptUrl"
         ).value;
         if (receiptUrl) {
           window.open(receiptUrl, "_blank");
@@ -3079,7 +3079,7 @@
 
       function editRegistration(registrationId) {
         const registration = currentData.registrations.find(
-          (r) => r.id === registrationId,
+          (r) => r.id === registrationId
         );
         if (!registration) return;
 
@@ -3107,7 +3107,7 @@
           registration.isPaid.toString();
 
         new bootstrap.Modal(
-          document.getElementById("editRegistrationModal"),
+          document.getElementById("editRegistrationModal")
         ).show();
       }
 
@@ -3140,7 +3140,7 @@
               method: "PUT",
               headers: getAuthHeaders(),
               body: JSON.stringify(formData),
-            },
+            }
           );
 
           const result = await response.json();
@@ -3151,13 +3151,13 @@
               if (result.email.ok) {
                 showAlert(
                   "Registration updated successfully and payment confirmation email sent",
-                  "success",
+                  "success"
                 );
               } else {
                 showAlert(
                   "Registration updated but email could not be sent: " +
                     result.email.error,
-                  "warning",
+                  "warning"
                 );
               }
             } else {
@@ -3165,7 +3165,7 @@
             }
 
             bootstrap.Modal.getInstance(
-              document.getElementById("editRegistrationModal"),
+              document.getElementById("editRegistrationModal")
             ).hide();
             await refreshAllData();
           } else {
@@ -3230,7 +3230,7 @@
             {
               method: "DELETE",
               headers: getAuthHeaders(),
-            },
+            }
           );
 
           if (response.ok) {
@@ -3291,7 +3291,7 @@
             `${API_BASE}/reviewing-committee/active-members`,
             {
               headers: getAuthHeaders(),
-            },
+            }
           );
 
           // console.log('Active committee response status:', response.status);
@@ -3306,7 +3306,7 @@
             console.error(
               "Active committee API Error:",
               response.status,
-              errorText,
+              errorText
             );
           }
         } catch (error) {
@@ -3458,7 +3458,7 @@
                 if (data && data.length > 50) {
                   return `<span title="${data}">${data.substring(
                     0,
-                    50,
+                    50
                   )}...</span>`;
                 }
                 return data || "-";
@@ -3600,7 +3600,7 @@
             `${API_BASE}/admin/speakers/${speakerId}`,
             {
               headers: getAuthHeaders(),
-            },
+            }
           );
 
           if (!response.ok) {
@@ -3694,8 +3694,8 @@
 							<table class="table table-sm">
 								<tr><td><strong>Name:</strong></td><td>${speaker.name || "-"}</td></tr>
 								<tr><td><strong>Email:</strong></td><td><a href="mailto:${speaker.email}">${
-                  speaker.email || "-"
-                }</a></td></tr>
+            speaker.email || "-"
+          }</a></td></tr>
 								<tr><td><strong>Phone:</strong></td><td>${speaker.phone || "-"}</td></tr>
 								<tr><td><strong>Institution:</strong></td><td>${
                   speaker.institutionName || "-"
@@ -3753,7 +3753,7 @@
 												<td>${coAuthor.orcidId || "-"}</td>
 												<td>${coAuthor.corresponding ? "Yes" : "No"}</td>
 											</tr>
-										`,
+										`
                       )
                       .join("")}
 									</tbody>
@@ -3800,16 +3800,16 @@
 							<h6 class="text-primary mb-3">Review Information</h6>
 							<table class="table table-sm">
 								<tr><td><strong>Status:</strong></td><td>${getReviewStatusBadge(
-                  speaker.reviewStatus,
+                  speaker.reviewStatus
                 )}</td></tr>
 								<tr><td><strong>Sent to Committee:</strong></td><td>${
                   speaker.sentToCommittee ? "Yes" : "No"
                 }</td></tr>
 								<tr><td><strong>Submitted:</strong></td><td>${new Date(
-                  speaker.createdAt,
+                  speaker.createdAt
                 ).toLocaleDateString()}</td></tr>
 								<tr><td><strong>Last Updated:</strong></td><td>${new Date(
-                  speaker.updatedAt,
+                  speaker.updatedAt
                 ).toLocaleDateString()}</td></tr>
 							</table>
 						</div>
@@ -3837,10 +3837,10 @@
                         ? "check text-success"
                         : "times text-danger"
                     }"></i> Preprint Policy ${
-                      speaker.preprintUrl
-                        ? `(<a href="${speaker.preprintUrl}" target="_blank">View</a>)`
-                        : ""
-                    }</li>
+            speaker.preprintUrl
+              ? `(<a href="${speaker.preprintUrl}" target="_blank">View</a>)`
+              : ""
+          }</li>
 										<li><i class="fas fa-${
                       speaker.conflictOfInterest
                         ? "check text-success"
@@ -3886,13 +3886,13 @@
           document.getElementById("paperSubmissionDetailsContent").innerHTML =
             content;
           new bootstrap.Modal(
-            document.getElementById("paperSubmissionDetailsModal"),
+            document.getElementById("paperSubmissionDetailsModal")
           ).show();
         } catch (error) {
           console.error("Error loading paper submission details:", error);
           showAlert(
             "Error loading paper submission details: " + error.message,
-            "danger",
+            "danger"
           );
         }
       }
@@ -3957,7 +3957,7 @@
           console.error("Error loading speaker statistics:", err);
           showAlert(
             "Error loading speaker statistics: " + err.message,
-            "danger",
+            "danger"
           );
         }
       }
@@ -3975,7 +3975,7 @@
 
         // Populate committee checkboxes
         const checkboxContainer = document.getElementById(
-          "committeeCheckboxes",
+          "committeeCheckboxes"
         );
         checkboxContainer.innerHTML = "";
 
@@ -4001,10 +4001,10 @@
           .getElementById("sendToAllCommittee")
           .addEventListener("change", function () {
             const memberChecks = document.querySelectorAll(
-              ".committee-member-check",
+              ".committee-member-check"
             );
             const container = document.getElementById(
-              "committeeSelectContainer",
+              "committeeSelectContainer"
             );
 
             if (this.checked) {
@@ -4015,28 +4015,28 @@
           });
 
         new bootstrap.Modal(
-          document.getElementById("sendToCommitteeModal"),
+          document.getElementById("sendToCommitteeModal")
         ).show();
       }
 
       // Send speaker to committee
       async function sendSpeakerToCommittee() {
         const speakerId = document.getElementById(
-          "sendToCommitteeSpeakerId",
+          "sendToCommitteeSpeakerId"
         ).value;
         const sendToAll = document.getElementById("sendToAllCommittee").checked;
 
         let committeeIds = [];
         if (!sendToAll) {
           const checkedBoxes = document.querySelectorAll(
-            ".committee-member-check:checked",
+            ".committee-member-check:checked"
           );
           committeeIds = Array.from(checkedBoxes).map((cb) => cb.value);
 
           if (committeeIds.length === 0) {
             showAlert(
               'Please select at least one committee member or choose "Send to All"',
-              "warning",
+              "warning"
             );
             return;
           }
@@ -4053,19 +4053,19 @@
                 committeeIds: sendToAll ? [] : committeeIds,
                 sendToAll: sendToAll,
               }),
-            },
+            }
           );
 
           const result = await response.json();
           if (response.ok) {
             showAlert(result.message, "success");
             bootstrap.Modal.getInstance(
-              document.getElementById("sendToCommitteeModal"),
+              document.getElementById("sendToCommitteeModal")
             ).hide();
             loadSpeakers(); // Reload speakers to update status
           } else {
             throw new Error(
-              result.message || "Failed to send speaker to committee",
+              result.message || "Failed to send speaker to committee"
             );
           }
         } catch (error) {
@@ -4090,17 +4090,17 @@
         document.getElementById("speakerStatusNotes").value = "";
 
         new bootstrap.Modal(
-          document.getElementById("updateSpeakerStatusModal"),
+          document.getElementById("updateSpeakerStatusModal")
         ).show();
       }
 
       // Update speaker review status
       async function updateSpeakerReviewStatus() {
         const speakerId = document.getElementById(
-          "updateStatusSpeakerId",
+          "updateStatusSpeakerId"
         ).value;
         const reviewStatus = document.getElementById(
-          "speakerReviewStatus",
+          "speakerReviewStatus"
         ).value;
         const notes = document.getElementById("speakerStatusNotes").value;
 
@@ -4125,19 +4125,19 @@
                 reviewStatus: reviewStatus,
                 notes: notes,
               }),
-            },
+            }
           );
 
           const result = await response.json();
           if (response.ok) {
             showAlert("Speaker status updated successfully", "success");
             bootstrap.Modal.getInstance(
-              document.getElementById("updateSpeakerStatusModal"),
+              document.getElementById("updateSpeakerStatusModal")
             ).hide();
             loadSpeakers(); // Reload speakers to update status
           } else {
             throw new Error(
-              result.message || "Failed to update speaker status",
+              result.message || "Failed to update speaker status"
             );
           }
         } catch (error) {
@@ -4177,7 +4177,7 @@
                   }`,
                 },
                 body: fd,
-              },
+              }
             );
 
             const out = await res.json();
@@ -4210,7 +4210,7 @@
               headers: {
                 Authorization: `Bearer ${localStorage.getItem("token") || ""}`,
               },
-            },
+            }
           );
 
           // Backend returns JSON with { success, message, speaker? }
@@ -4265,31 +4265,31 @@
         // Add form fields to FormData
         formData.append(
           "name",
-          document.getElementById("editSpeakerName").value,
+          document.getElementById("editSpeakerName").value
         );
         formData.append(
           "email",
-          document.getElementById("editSpeakerEmail").value,
+          document.getElementById("editSpeakerEmail").value
         );
         formData.append(
           "institutionName",
-          document.getElementById("editSpeakerInstitution").value,
+          document.getElementById("editSpeakerInstitution").value
         );
         formData.append(
           "country",
-          document.getElementById("editSpeakerCountry").value,
+          document.getElementById("editSpeakerCountry").value
         );
         formData.append(
           "paperTitle",
-          document.getElementById("editSpeakerPaperTitle").value,
+          document.getElementById("editSpeakerPaperTitle").value
         );
         formData.append(
           "phone",
-          document.getElementById("editSpeakerPhone").value,
+          document.getElementById("editSpeakerPhone").value
         );
         formData.append(
           "reviewStatus",
-          document.getElementById("editSpeakerReviewStatus").value,
+          document.getElementById("editSpeakerReviewStatus").value
         );
 
         // Add file if selected
@@ -4312,7 +4312,7 @@
           if (response.ok) {
             showAlert("Speaker updated successfully", "success");
             bootstrap.Modal.getInstance(
-              document.getElementById("editSpeakerModal"),
+              document.getElementById("editSpeakerModal")
             ).hide();
             loadSpeakers();
           } else {
@@ -4336,7 +4336,7 @@
             {
               method: "DELETE",
               headers: getAuthHeaders(),
-            },
+            }
           );
 
           if (response.ok) {
@@ -4450,7 +4450,7 @@
 
       function editKeynoteSpeaker(keynoteSpeakerId) {
         const keynoteSpeaker = currentData.keynoteSpeakers.find(
-          (ks) => ks.id === keynoteSpeakerId,
+          (ks) => ks.id === keynoteSpeakerId
         );
         if (!keynoteSpeaker) return;
 
@@ -4481,7 +4481,7 @@
           keynoteSpeaker.status || "PENDING";
 
         new bootstrap.Modal(
-          document.getElementById("editKeynoteSpeakerModal"),
+          document.getElementById("editKeynoteSpeakerModal")
         ).show();
       }
 
@@ -4494,13 +4494,13 @@
           designation: document.getElementById("editKeynoteSpeakerDesignation")
             .value,
           institutionName: document.getElementById(
-            "editKeynoteSpeakerInstitution",
+            "editKeynoteSpeakerInstitution"
           ).value,
           experienceYears: document.getElementById(
-            "editKeynoteSpeakerExperience",
+            "editKeynoteSpeakerExperience"
           ).value,
           specialization: document.getElementById(
-            "editKeynoteSpeakerSpecialization",
+            "editKeynoteSpeakerSpecialization"
           ).value,
           keynoteTitle: document.getElementById("editKeynoteSpeakerTitle")
             .value,
@@ -4518,26 +4518,26 @@
               method: "PUT",
               headers: getAuthHeaders(),
               body: JSON.stringify(formData),
-            },
+            }
           );
 
           if (response.ok) {
             showAlert("Keynote Speaker updated successfully", "success");
             bootstrap.Modal.getInstance(
-              document.getElementById("editKeynoteSpeakerModal"),
+              document.getElementById("editKeynoteSpeakerModal")
             ).hide();
             await refreshAllData();
           } else {
             const errorData = await response.json();
             throw new Error(
-              errorData.message || "Error updating keynote speaker",
+              errorData.message || "Error updating keynote speaker"
             );
           }
         } catch (error) {
           console.error("Error updating keynote speaker:", error);
           showAlert(
             `Error updating keynote speaker: ${error.message}`,
-            "danger",
+            "danger"
           );
         } finally {
           hideLoading();
@@ -4547,7 +4547,7 @@
       async function deleteKeynoteSpeaker(keynoteSpeakerId) {
         if (
           !confirm(
-            "Are you sure you want to delete this keynote speaker? This action cannot be undone.",
+            "Are you sure you want to delete this keynote speaker? This action cannot be undone."
           )
         )
           return;
@@ -4559,7 +4559,7 @@
             {
               method: "DELETE",
               headers: getAuthHeaders(),
-            },
+            }
           );
 
           if (response.ok) {
@@ -4568,14 +4568,14 @@
           } else {
             const errorData = await response.json();
             throw new Error(
-              errorData.message || "Error deleting keynote speaker",
+              errorData.message || "Error deleting keynote speaker"
             );
           }
         } catch (error) {
           console.error("Error deleting keynote speaker:", error);
           showAlert(
             `Error deleting keynote speaker: ${error.message}`,
-            "danger",
+            "danger"
           );
         } finally {
           hideLoading();
@@ -4690,7 +4690,7 @@
           if (response.ok) {
             showAlert("Sponsor updated successfully", "success");
             bootstrap.Modal.getInstance(
-              document.getElementById("editSponsorModal"),
+              document.getElementById("editSponsorModal")
             ).hide();
             loadSponsors();
           } else {
@@ -4714,7 +4714,7 @@
             {
               method: "DELETE",
               headers: getAuthHeaders(),
-            },
+            }
           );
 
           if (response.ok) {
@@ -4798,11 +4798,11 @@
             // sort by total desc by scraping number in last <td>, simple and effective
             const ta = parseInt(
               (a.match(/<strong>(\d+)<\/strong>/) || [])[1] || "0",
-              10,
+              10
             );
             const tb = parseInt(
               (b.match(/<strong>(\d+)<\/strong>/) || [])[1] || "0",
-              10,
+              10
             );
             return tb - ta;
           })
@@ -4899,7 +4899,7 @@
             `${API_BASE}/reviewing-committee/members`,
             {
               headers: getAuthHeaders(),
-            },
+            }
           );
 
           // console.log('Committee response status:', response.status);
@@ -4927,7 +4927,7 @@
           console.error("Error loading committee members:", error);
           showAlert(
             `Error loading committee members: ${error.message}`,
-            "danger",
+            "danger"
           );
         } finally {
           hideLoading();
@@ -4941,7 +4941,7 @@
             `${API_BASE}/reviewing-committee/stats`,
             {
               headers: getAuthHeaders(),
-            },
+            }
           );
 
           if (!response.ok) {
@@ -5084,7 +5084,7 @@
               method: "POST",
               headers: getAuthHeaders(),
               body: JSON.stringify(formData),
-            },
+            }
           );
 
           const result = await response.json();
@@ -5092,12 +5092,12 @@
             showAlert("Committee member created successfully", "success");
             document.getElementById("createCommitteeForm").reset();
             bootstrap.Modal.getInstance(
-              document.getElementById("createCommitteeModal"),
+              document.getElementById("createCommitteeModal")
             ).hide();
             loadCommitteeMembers();
           } else {
             throw new Error(
-              result.message || "Error creating committee member",
+              result.message || "Error creating committee member"
             );
           }
         } catch (error) {
@@ -5110,7 +5110,7 @@
 
       function editCommitteeMember(memberId) {
         const member = currentData.committeeMembers.find(
-          (m) => m.id === memberId,
+          (m) => m.id === memberId
         );
         if (!member) return;
 
@@ -5130,7 +5130,7 @@
           member.isActive.toString();
 
         new bootstrap.Modal(
-          document.getElementById("editCommitteeModal"),
+          document.getElementById("editCommitteeModal")
         ).show();
       }
 
@@ -5157,19 +5157,19 @@
               method: "PUT",
               headers: getAuthHeaders(),
               body: JSON.stringify(formData),
-            },
+            }
           );
 
           const result = await response.json();
           if (response.ok) {
             showAlert("Committee member updated successfully", "success");
             bootstrap.Modal.getInstance(
-              document.getElementById("editCommitteeModal"),
+              document.getElementById("editCommitteeModal")
             ).hide();
             loadCommitteeMembers();
           } else {
             throw new Error(
-              result.message || "Error updating committee member",
+              result.message || "Error updating committee member"
             );
           }
         } catch (error) {
@@ -5183,7 +5183,7 @@
       async function deleteCommitteeMember(memberId) {
         if (
           !confirm(
-            "Are you sure you want to delete this committee member? This action cannot be undone.",
+            "Are you sure you want to delete this committee member? This action cannot be undone."
           )
         )
           return;
@@ -5195,7 +5195,7 @@
             {
               method: "DELETE",
               headers: getAuthHeaders(),
-            },
+            }
           );
 
           const result = await response.json();
@@ -5204,7 +5204,7 @@
             loadCommitteeMembers();
           } else {
             throw new Error(
-              result.message || "Error deleting committee member",
+              result.message || "Error deleting committee member"
             );
           }
         } catch (error) {
@@ -5255,8 +5255,8 @@
           s === "RESOLVED_EMAIL"
             ? "Resolved (Email)"
             : s === "RESOLVED_PHONE"
-              ? "Resolved (Phone)"
-              : (s || "PENDING").replace("_", " ");
+            ? "Resolved (Phone)"
+            : (s || "PENDING").replace("_", " ");
         return `<span class="${
           classes[s] || "badge bg-light text-dark"
         }">${label}</span>`;
@@ -5306,7 +5306,7 @@
                 if (data && data.length > 50)
                   return `<span title="${data}">${data.substring(
                     0,
-                    50,
+                    50
                   )}...</span>`;
                 return data || "-";
               },
@@ -5318,7 +5318,7 @@
                 if (data && data.length > 100)
                   return `<span title="${data}">${data.substring(
                     0,
-                    100,
+                    100
                   )}...</span>`;
                 return data || "-";
               },
@@ -5434,16 +5434,16 @@
         contact.status === "RESOLVED_PHONE" ? "selected" : ""
       } ${locked ? "disabled" : ""}>Resolved (Phone)</option>
 			<option value="CLOSED" ${contact.status === "CLOSED" ? "selected" : ""} ${
-        locked ? "disabled" : ""
-      }>Closed</option>
+          locked ? "disabled" : ""
+        }>Closed</option>
 		`;
 
         const lockInfo =
           contact.status === "CLOSED"
             ? `<div class="alert alert-secondary mb-3"><i class="fas fa-lock me-1"></i> This query is <strong>Closed</strong> and cannot be changed.</div>`
             : locked
-              ? `<div class="alert alert-info mb-3"><i class="fas fa-hourglass-half me-1"></i> Resolution options are locked for <strong>${remaining} hour(s)</strong> after moving to In-Progress.</div>`
-              : "";
+            ? `<div class="alert alert-info mb-3"><i class="fas fa-hourglass-half me-1"></i> Resolution options are locked for <strong>${remaining} hour(s)</strong> after moving to In-Progress.</div>`
+            : "";
 
         const content = `
 			<div class="row">
@@ -5459,7 +5459,7 @@
         }</a></td></tr>
 				<tr><td><strong>Subject:</strong></td><td>${contact.subject}</td></tr>
 				<tr><td><strong>Date:</strong></td><td>${new Date(
-          contact.createdAt,
+          contact.createdAt
         ).toLocaleString()}</td></tr>
 				</table>
 			</div>
@@ -5467,7 +5467,7 @@
 				<h6 class="text-primary mb-3">Message</h6>
 				<div class="border rounded p-3 bg-light">${(contact.message || "").replace(
           /\n/g,
-          "<br>",
+          "<br>"
         )}</div>
 			</div>
 			</div>
@@ -5547,7 +5547,7 @@
                   method: "PATCH",
                   headers: getAuthHeaders(), // keep exactly what worked before
                   body: JSON.stringify({ resolutionNotes: newNotes }),
-                },
+                }
               );
 
               // Handle non-2xx
@@ -5579,7 +5579,7 @@
 
               // 2) Update cached list so reopening shows newest notes
               const idx = currentData.contacts.findIndex(
-                (c) => c.id === contact.id,
+                (c) => c.id === contact.id
               );
               if (idx !== -1)
                 currentData.contacts[idx].resolutionNotes =
@@ -5623,7 +5623,7 @@
                   method: "PATCH",
                   headers: getAuthHeaders(),
                   body: JSON.stringify({ status: newStatus }),
-                },
+                }
               );
               const payload = await res.json();
               if (!res.ok)
@@ -5641,14 +5641,14 @@
           });
 
         modal.addEventListener("hidden.bs.modal", () =>
-          document.body.removeChild(modal),
+          document.body.removeChild(modal)
         );
       }
 
       async function deleteContact(contactId) {
         if (
           !confirm(
-            "Are you sure you want to delete this contact query? This action cannot be undone.",
+            "Are you sure you want to delete this contact query? This action cannot be undone."
           )
         )
           return;
@@ -5693,7 +5693,7 @@
           console.error("Error loading reviewer expressions:", err);
           showAlert(
             `Failed to load reviewer expressions. ${err.message || ""}`,
-            "danger",
+            "danger"
           );
         } finally {
           hideLoading();
@@ -5815,8 +5815,8 @@
                   curr === "ACCEPTED"
                     ? "btn-success"
                     : curr === "REJECTED"
-                      ? "btn-danger"
-                      : "btn-warning text-dark"; // PENDING
+                    ? "btn-danger"
+                    : "btn-warning text-dark"; // PENDING
 
                 return `
       <div class="dropdown" style="position:relative; overflow:visible;">
@@ -5892,7 +5892,7 @@
               method: "PATCH",
               headers: getAuthHeaders(),
               body: JSON.stringify({ status: nextStatus }),
-            },
+            }
           );
           const text = await res.text().catch(() => "");
           if (!res.ok) throw new Error(`HTTP ${res.status} ${text}`);
