@@ -8,7 +8,7 @@ _Generated automatically from the uploaded zip (well-known.zip)._
 
 - **Dynamic features:** Forms (registration, sponsors, keynote-speakers, contact) and **Admin/Super Admin** dashboards interact with a remote API.
 
-- **Backend API base:** Endpoints point to `https://icaicn-be.onrender.com/`.
+- **Backend API base:** Endpoints point to `https://backend-icaicn.traveon.in/`.
 
 ## Quick File Tree (depth 2)
 
@@ -128,27 +128,27 @@ Vendor JS files:
 
 ## Pages Inventory
 
-| File                             | <title>                       | API endpoints (inline)                                                                                       |                                                        CSS |  JS | Inline JS |
-| -------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------: | --: | --------: | --- |
-| `about.html`                     | About                         | ICAICN 2026                                                                                                  |                                                          - |  11 |        18 | 1   |
-| `admin/adminDashboard.html`      | Admin Dashboard               | ICAICN 2026                                                                                                  | http://localhost:5000/api, https://icaicn-be.onrender.com/ |   3 |         4 | 1   |
-| `admin/index.html`               | Admin Login                   | ICAICN 2026                                                                                                  |                            https://icaicn-be.onrender.com/ |   2 |         2 | 1   |
-| `admin/superAdminDashboard.html` | Super Admin Dashboard         | ICAICN 2026                                                                                                  |                            https://icaicn-be.onrender.com/ |   4 |         9 | 1   |
-| `agenda.html`                    | Conference Agenda             | ICAICN 2026                                                                                                  |                                                          - |  11 |        18 | 1   |
-| `code-of-conduct.html`           | Code of Conduct - ICAICN 2026 | -                                                                                                            |                                                         11 |  18 |         1 |
-| `contact.html`                   | Contact Us                    | ICAICN 2026                                                                                                  |                    https://icaicn-be.onrender.com//contact |  11 |        18 | 1   |
-| `event-policy.html`              | Event Policies - ICAICN 2026  | -                                                                                                            |                                                         11 |  18 |         1 |
-| `exhibition.html`                | Sponsors                      | ICAICN 2026                                                                                                  |                                                          - |  11 |        18 | 1   |
-| `faq.html`                       | FAQ                           | ICAICN 2026                                                                                                  |                                                          - |  11 |        18 | 0   |
-| `features.html`                  | Features                      | ICAICN 2026                                                                                                  |                                                          - |  11 |        18 | 1   |
-| `index.html`                     | ICAICN 2026                   | https://icaicn-be.onrender.com//contact                                                                      |                                                         11 |  18 |         1 |
-| `keynote-speaker-register.html`  | ICAICN 2026                   | http://localhost:5000/api/keynote-speaker/register, https://icaicn-be.onrender.com//keynote-speaker/register |                                                         11 |  18 |         1 |
-| `paper-review.html`              | Paper Review                  | ICAICN 2026                                                                                                  |  https://icaicn-be.onrender.com//speaker/speakers/${id}`); |  11 |        18 | 1   |
-| `paper.html`                     | Paper Submission              | ICAICN 2026                                                                                                  |           https://icaicn-be.onrender.com//speaker/register |  11 |        18 | 1   |
-| `register.html`                  | Register                      | ICAICN 2026                                                                                                  |        https://icaicn-be.onrender.com//conference/register |  11 |        18 | 1   |
-| `speakers.html`                  | Our Speakers                  | ICAICN 2026                                                                                                  |                                                          - |  11 |        18 | 1   |
-| `sponsor-register.html`          | Sponsor Register              | ICAICN 2026                                                                                                  |           https://icaicn-be.onrender.com//sponsor/register |  11 |        18 | 1   |
-| `sponsors.html`                  | Sponsors                      | ICAICN 2026                                                                                                  |                                                          - |  11 |        18 | 0   |
+| File                             | <title>                       | API endpoints (inline)                                                                                          |                                                           CSS |  JS | Inline JS |
+| -------------------------------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------: | --: | --------: | --- |
+| `about.html`                     | About                         | ICAICN 2026                                                                                                     |                                                             - |  11 |        18 | 1   |
+| `admin/adminDashboard.html`      | Admin Dashboard               | ICAICN 2026                                                                                                     | http://localhost:5000/api, https://backend-icaicn.traveon.in/ |   3 |         4 | 1   |
+| `admin/index.html`               | Admin Login                   | ICAICN 2026                                                                                                     |                            https://backend-icaicn.traveon.in/ |   2 |         2 | 1   |
+| `admin/superAdminDashboard.html` | Super Admin Dashboard         | ICAICN 2026                                                                                                     |                            https://backend-icaicn.traveon.in/ |   4 |         9 | 1   |
+| `agenda.html`                    | Conference Agenda             | ICAICN 2026                                                                                                     |                                                             - |  11 |        18 | 1   |
+| `code-of-conduct.html`           | Code of Conduct - ICAICN 2026 | -                                                                                                               |                                                            11 |  18 |         1 |
+| `contact.html`                   | Contact Us                    | ICAICN 2026                                                                                                     |                    https://backend-icaicn.traveon.in//contact |  11 |        18 | 1   |
+| `event-policy.html`              | Event Policies - ICAICN 2026  | -                                                                                                               |                                                            11 |  18 |         1 |
+| `exhibition.html`                | Sponsors                      | ICAICN 2026                                                                                                     |                                                             - |  11 |        18 | 1   |
+| `faq.html`                       | FAQ                           | ICAICN 2026                                                                                                     |                                                             - |  11 |        18 | 0   |
+| `features.html`                  | Features                      | ICAICN 2026                                                                                                     |                                                             - |  11 |        18 | 1   |
+| `index.html`                     | ICAICN 2026                   | https://backend-icaicn.traveon.in//contact                                                                      |                                                            11 |  18 |         1 |
+| `keynote-speaker-register.html`  | ICAICN 2026                   | http://localhost:5000/api/keynote-speaker/register, https://backend-icaicn.traveon.in//keynote-speaker/register |                                                            11 |  18 |         1 |
+| `paper-review.html`              | Paper Review                  | ICAICN 2026                                                                                                     |  https://backend-icaicn.traveon.in//speaker/speakers/${id}`); |  11 |        18 | 1   |
+| `paper.html`                     | Paper Submission              | ICAICN 2026                                                                                                     |           https://backend-icaicn.traveon.in//speaker/register |  11 |        18 | 1   |
+| `register.html`                  | Register                      | ICAICN 2026                                                                                                     |        https://backend-icaicn.traveon.in//conference/register |  11 |        18 | 1   |
+| `speakers.html`                  | Our Speakers                  | ICAICN 2026                                                                                                     |                                                             - |  11 |        18 | 1   |
+| `sponsor-register.html`          | Sponsor Register              | ICAICN 2026                                                                                                     |           https://backend-icaicn.traveon.in//sponsor/register |  11 |        18 | 1   |
+| `sponsors.html`                  | Sponsors                      | ICAICN 2026                                                                                                     |                                                             - |  11 |        18 | 0   |
 
 ## Where to Change What (Most Common Edits)
 
@@ -218,7 +218,7 @@ Vendor JS files:
 
 ## Configuration & Constants
 
-- Detected `API_BASE` constants: https://icaicn-be.onrender.com/
+- Detected `API_BASE` constants: https://backend-icaicn.traveon.in/
 
 - Token key in `localStorage`: adminToken
 
