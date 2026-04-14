@@ -1798,15 +1798,28 @@
                   </div>
                 </div>
               </div>
-              <div class="mb-3">
-                <label for="editSponsorPackage" class="form-label"
-                  >Sponsorship Package</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="editSponsorPackage"
-                />
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="editSponsorPackage" class="form-label"
+                      >Sponsorship Package</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="editSponsorPackage"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="editSponsorIsPaid" class="form-label">Payment Status</label>
+                    <select class="form-select" id="editSponsorIsPaid">
+                      <option value="false">Pending</option>
+                      <option value="true">Paid</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </form>
           </div>
@@ -2929,9 +2942,10 @@
           const response = await fetch(`${API_BASE}/admin/registrations`, {
             headers: getAuthHeaders(),
           });
-          const registrations = await response.json();
-          currentData.registrations = registrations;
-          displayRegistrations(registrations);
+          const responseData = await response.json();
+          const items = responseData.items || responseData;
+          currentData.registrations = items;
+          displayRegistrations(items, responseData.total);
         } catch (error) {
           console.error("Error loading registrations:", error);
           showAlert("Error loading registrations", "danger");
@@ -2940,9 +2954,9 @@
         }
       }
 
-      function displayRegistrations(registrations) {
+      function displayRegistrations(registrations, totalCount) {
         document.getElementById("registrationsCount").textContent =
-          registrations.length;
+          totalCount !== undefined ? totalCount : registrations.length;
 
         if ($.fn.DataTable.isDataTable("#registrationsTable")) {
           $("#registrationsTable").DataTable().destroy();
@@ -4732,6 +4746,9 @@
         document.getElementById("editSponsorPhone").value = sponsor.phone || "";
         document.getElementById("editSponsorPackage").value =
           sponsor.sponsorshipPackage || "";
+        document.getElementById("editSponsorIsPaid").value = (
+          sponsor.isPaid || false
+        ).toString();
 
         new bootstrap.Modal(document.getElementById("editSponsorModal")).show();
       }
@@ -4745,6 +4762,7 @@
           phone: document.getElementById("editSponsorPhone").value,
           sponsorshipPackage:
             document.getElementById("editSponsorPackage").value,
+          isPaid: document.getElementById("editSponsorIsPaid").value === "true",
         };
 
         try {

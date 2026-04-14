@@ -811,7 +811,7 @@ India International Centre for a transformative conference exploring the latest 
                   <span><i class="fa-solid fa-phone-volume"></i></span>
                 </div>
                 <div class="contact-info-text">
-                  <a href="tel:+919540111207">+91-9540111312</a>
+                  <a href="tel:9540111312">9540111312</a>
                 </div>
               </div>
 
@@ -837,8 +837,7 @@ India International Centre for a transformative conference exploring the latest 
                       href="https://maps.app.goo.gl/TPcoCrYTzf9Q77Lu5?g_st=aw"
                       target="_blank"
                     >
-                      New Delhi, India (To be confirmed)
-                    </a>
+                      India International Centre, Lodhi Estate, New Delhi, India</a>
                   </div>
                 </div>
               </div>
@@ -1534,8 +1533,7 @@ India International Centre for a transformative conference exploring the latest 
                     <select class="form-control" id="placeDate" required>
                       <option value="" disabled>Select your country</option>
                       <option value="New Delhi - 11-12 June 2026" selected>
-                        New Delhi, India (11 - 12 June 2026)
-                      </option>
+                        India International Centre, Lodhi Estate, New Delhi, India</option>
                     </select>
                   </div>
                 </div>
@@ -2765,8 +2763,7 @@ India International Centre for a transformative conference exploring the latest 
             <div class="venue-info">
               <div class="university-name">
                 <i class="fas fa-university"></i>
-                New Delhi, India (To be Confirmed)
-              </div>
+                India International Centre, Lodhi Estate, New Delhi, India</div>
 
               <div class="organized-by">
                 <i class="fas fa-users"></i>
@@ -2873,13 +2870,13 @@ India International Centre for a transformative conference exploring the latest 
               <ul>
                 <li>
                   <a
-                    href="tel:+91-9540111312"
+                    href="tel:9540111312"
                     target="_blank"
                     style="display: flex"
                   >
                     <img src="assets/img/icons/phn1.svg" alt="" />
                     <div class="">
-                      <span>+91-9540111312</span> <br />
+                      <span>9540111312</span> <br />
                       <!-- <span style="margin-right: 10px;"></span> -->
                     </div>
                   </a>
@@ -3818,6 +3815,7 @@ India International Centre for a transformative conference exploring the latest 
                   .checked.toString(),
                 referralCode: (
                   document.getElementById("referralCode")?.value ||
+                  new URLSearchParams(window.location.search).get("ref") ||
                   localStorage.getItem("referralCode") ||
                   referralCodeFromUrl ||
                   ""

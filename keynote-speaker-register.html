@@ -966,7 +966,7 @@ India International Centre for a transformative conference exploring the latest 
                   <span><i class="fa-solid fa-phone-volume"></i></span>
                 </div>
                 <div class="contact-info-text">
-                  <a href="tel:9540111207">+91-9540111312</a>
+                  <a href="tel:9540111312">9540111312</a>
                 </div>
               </div>
               <div class="contact-info-single">
@@ -990,7 +990,7 @@ India International Centre for a transformative conference exploring the latest 
                       href="https://maps.app.goo.gl/TPcoCrYTzf9Q77Lu5?g_st=aw"
                       target="_blank"
                     >
-                      New Delhi, India (To be confirmed)
+                      India International Centre, Lodhi Estate, New Delhi, India
                     </a>
                   </div>
                 </div>
@@ -1600,6 +1600,17 @@ India International Centre for a transformative conference exploring the latest 
                         I agree to receive updates and marketing communications
                         about ICAICN and related events.
                       </label>
+                    </div>
+                  </div>
+
+                  <div class="col-12 mt-4">
+                    <div class="single-input">
+                      <input
+                        type="text"
+                        id="referralCode"
+                        name="referralCode"
+                        placeholder="Referral Code (Optional)"
+                      />
                     </div>
                   </div>
 
@@ -2514,6 +2525,12 @@ India International Centre for a transformative conference exploring the latest 
 
       document.addEventListener("DOMContentLoaded", function () {
         // NOTE: removed the global capture submit interceptor that blocked real handler
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlReferral = urlParams.get("ref");
+        if (urlReferral) {
+          const refInput = document.getElementById("referralCode");
+          if (refInput) refInput.value = urlReferral;
+        }
 
         // File upload URLs storage
         let uploadedFiles = {
@@ -2721,7 +2738,7 @@ India International Centre for a transformative conference exploring the latest 
           specialization: { required: true },
           highestDegree: { required: true },
           keynoteTitle: { required: true },
-          keynoteAbstract: { required: true, minLength: 100 },
+          keynoteAbstract: { required: true, minWords: 100, maxWords: 500 },
         };
 
         function validateField(fieldName, value) {
@@ -2732,6 +2749,16 @@ India International Centre for a transformative conference exploring the latest 
 
           if (rule.required && (!value || value.trim() === "")) {
             errors.push(`${fieldName} is required`);
+          }
+
+          const wordCount = value ? value.trim().split(/\s+/).filter(Boolean).length : 0;
+
+          if (value && rule.minWords && wordCount < rule.minWords) {
+            errors.push(`${fieldName} must be at least ${rule.minWords} words`);
+          }
+
+          if (value && rule.maxWords && wordCount > rule.maxWords) {
+            errors.push(`${fieldName} must be at most ${rule.maxWords} words`);
           }
 
           if (value && rule.minLength && value.length < rule.minLength) {
@@ -2859,6 +2886,12 @@ India International Centre for a transformative conference exploring the latest 
             jsonData.cvFileUrl = uploadedFiles.cvFileUrl;
             jsonData.photoFileUrl = uploadedFiles.photoFileUrl;
             jsonData.presentationFileUrl = uploadedFiles.presentationFileUrl;
+
+            // Fallback for referral code if absent from form extraction
+            if (!jsonData.referralCode) {
+              const fallbackRef = new URLSearchParams(window.location.search).get("ref");
+              if (fallbackRef) jsonData.referralCode = fallbackRef;
+            }
 
             const response = await fetch(`${API}/keynote-speaker/register`, {
               method: "POST",
@@ -3334,13 +3367,13 @@ India International Centre for a transformative conference exploring the latest 
               <ul>
                 <li>
                   <a
-                    href="tel:+91-9540111207"
+                    href="tel:9540111312"
                     target="_blank"
                     style="display: flex"
                   >
                     <img src="assets/img/icons/phn1.svg" alt="" />
                     <div class="">
-                      <span>+91-9540111312</span> <br />
+                      <span>9540111312</span> <br />
                       <span style="margin-right: 10px"></span>
                     </div>
                   </a>
@@ -3348,7 +3381,7 @@ India International Centre for a transformative conference exploring the latest 
                 <li>
                   <a href="#" target="_blank"
                     ><img src="assets/img/icons/location1.svg" alt="" />
-                    New Delhi, India (To be confirmed)
+                    India International Centre, Lodhi Estate, New Delhi, India
                   </a>
                 </li>
                 <li>

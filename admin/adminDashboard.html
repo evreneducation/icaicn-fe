@@ -1791,7 +1791,7 @@
           .then((data) => {
             // Initialize DataTable with responsive configuration
             $("#registrationsTable").DataTable({
-              data: data,
+              data: data.items || data,
               columns: [
                 {
                   data: "id",

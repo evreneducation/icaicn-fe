@@ -2635,8 +2635,8 @@
           previewWrap.style.display = "block";
 
           if (f.type === "application/pdf" || /\.pdf$/i.test(f.name)) {
-            pdfPreview.style.display = "block";
-            pdfPreview.src = url;
+            // No blob preview for PDF to avoid CSP issues with iframes
+            pdfPreview.style.display = "none"; 
           } else if (
             f.type.startsWith("image/") ||
             /\.(png|jpg|jpeg|webp)$/i.test(f.name)
@@ -2645,6 +2645,8 @@
             imgPreview.src = url;
           } else {
             // doc/docx or other allowed non-preview types: just show file meta, no preview
+            pdfPreview.style.display = "none";
+            imgPreview.style.display = "none";
           }
 
           validateAll(false);
@@ -2847,13 +2849,13 @@
               <ul>
                 <li>
                   <a
-                    href="tel:+91-9540111312"
+                    href="tel:9540111312"
                     target="_blank"
                     style="display: flex"
                   >
                     <img src="assets/img/icons/phn1.svg" alt="" />
                     <div class="">
-                      <span>+91-9540111312</span> <br />
+                      <span>9540111312</span> <br />
                       <!-- <span style="margin-right: 10px;"></span> -->
                     </div>
                   </a>
