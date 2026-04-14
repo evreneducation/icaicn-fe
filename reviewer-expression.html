@@ -1257,38 +1257,41 @@ India International Centre for a transformative conference exploring the latest 
 
           // ALL EXISTING VALIDATIONS
           if (!name || !email || !currentJobTitle || !institution || !phone) {
-            toastMsg.textContent =
-              "Please fill all required fields (Name, Email, Phone, Job Title, Institution).";
-            toastEl.classList.remove("text-bg-success");
-            toastEl.classList.add("text-bg-danger");
-            toast.show();
+            showModal(
+              "Missing Fields",
+              "Please fill all required fields (Name, Email, Phone, Job Title, Institution).",
+              "error"
+            );
             return;
           }
           if (!rolePreference) {
-            toastMsg.textContent = "Please select 'Registering As'.";
-            toastEl.classList.remove("text-bg-success");
-            toastEl.classList.add("text-bg-danger");
-            toast.show();
+            showModal(
+              "Missing Field",
+              "Please select 'Registering As'.",
+              "error"
+            );
             return;
           }
 
           // Email validation
           const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
           if (!emailRegex.test(email)) {
-            toastMsg.textContent = "Please enter a valid email address.";
-            toastEl.classList.remove("text-bg-success");
-            toastEl.classList.add("text-bg-danger");
-            toast.show();
+            showModal(
+              "Invalid Email",
+              "Please enter a valid email address.",
+              "error"
+            );
             return;
           }
 
           // Phone validation
           const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
           if (!phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ""))) {
-            toastMsg.textContent = "Please enter a valid phone number.";
-            toastEl.classList.remove("text-bg-success");
-            toastEl.classList.add("text-bg-danger");
-            toast.show();
+            showModal(
+              "Invalid Phone",
+              "Please enter a valid phone number.",
+              "error"
+            );
             return;
           }
 
@@ -1340,11 +1343,11 @@ India International Centre for a transformative conference exploring the latest 
             const result = await response.json();
 
             if (result.success) {
-              toastMsg.textContent =
-                "Reviewer expression submitted successfully!";
-              toastEl.classList.remove("text-bg-danger");
-              toastEl.classList.add("text-bg-success");
-              toast.show();
+              showModal(
+                "Submission Successful!",
+                "Thank you for your expression of interest. We will review your application and get back to you shortly.",
+                "success"
+              );
               form.reset();
               cvUrl = null;
               // Reset file input style
@@ -1360,11 +1363,11 @@ India International Centre for a transformative conference exploring the latest 
             }
           } catch (error) {
             console.error("Submission error:", error);
-            toastMsg.textContent =
-              error.message || "Submission failed. Please try again.";
-            toastEl.classList.remove("text-bg-success");
-            toastEl.classList.add("text-bg-danger");
-            toast.show();
+            showModal(
+              "Submission Failed",
+              error.message || "Submission failed. Please try again.",
+              "error"
+            );
           } finally {
             setLoading(false);
           }

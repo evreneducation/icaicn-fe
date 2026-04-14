@@ -3400,19 +3400,20 @@
       async function loadSpeakers() {
         try {
           showLoading();
-          // const response = await fetch(`${API_BASE}/admin/speakers`, {
           const response = await fetch(`${API_BASE}/admin/speakers`, {
             headers: getAuthHeaders(),
           });
-          const speakers = await response.json();
-          // console.log('Raw speakers data:', speakers);
+          const data = await response.json();
+          // The API returns { speakers: [...], total: X, ... }
+          const speakers = data.speakers || data;
+          const total = data.total !== undefined ? data.total : (Array.isArray(speakers) ? speakers.length : 0);
+          
           currentData.speakers = speakers;
-          // console.log('Processed speakers data:', currentData.speakers);
 
           // Load committee members for the send to committee functionality
           await loadActiveCommitteeMembers();
 
-          displaySpeakers(speakers);
+          displaySpeakers(speakers, total);
         } catch (error) {
           console.error("Error loading speakers:", error);
           showAlert("Error loading speakers", "danger");
@@ -3421,8 +3422,8 @@
         }
       }
 
-      function displaySpeakers(speakers) {
-        document.getElementById("speakersCount").textContent = speakers.length;
+      function displaySpeakers(speakers, total) {
+        document.getElementById("speakersCount").textContent = total;
 
         if ($.fn.DataTable.isDataTable("#speakersTable")) {
           $("#speakersTable").DataTable().destroy();
