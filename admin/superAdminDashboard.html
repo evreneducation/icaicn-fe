@@ -536,6 +536,15 @@
             <i class="fas fa-user-check"></i>Expression of Interest
           </a>
         </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#"
+            onclick="showSection('award-nominations')"
+          >
+            <i class="fas fa-trophy"></i>Award Nominations
+          </a>
+        </li>
 
         <li class="nav-item">
           <a class="nav-link" href="#" onclick="showSection('analytics')">
@@ -874,6 +883,45 @@
                 <th>Actions</th>
               </tr>
             </thead>
+          </table>
+        </div>
+      </div>
+
+      <!-- Award Nominations Section -->
+      <div id="awardNominationsSection" class="content-section d-none">
+        <h2 class="section-title">Award Nominations</h2>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div class="d-flex gap-2">
+            <button class="btn btn-success" id="btnExportAwardCsv">
+              <i class="fas fa-download me-2"></i>Export CSV
+            </button>
+          </div>
+          <div class="d-flex align-items-center gap-3">
+            <span class="me-2">Total:</span>
+            <span class="badge bg-primary" id="awardNominationsCount">0</span>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table
+            id="awardNominationsTable"
+            class="table table-hover"
+            style="width: 100%"
+          >
+            <thead>
+              <tr>
+                <th style="min-width: 150px">Full Name</th>
+                <th style="min-width: 120px">Phone</th>
+                <th style="min-width: 180px">Email</th>
+                <th style="min-width: 150px">Award Category</th>
+                <th style="min-width: 150px">Designation</th>
+                <th style="min-width: 150px">Organization</th>
+                <th style="min-width: 120px">Industry</th>
+                <th style="min-width: 120px">Country</th>
+                <th style="min-width: 150px">Submitted</th>
+                <th style="min-width: 100px">Actions</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
           </table>
         </div>
       </div>
@@ -1871,7 +1919,7 @@
                   id="committeeExpertise"
                   rows="2"
                   required
-                  placeholder="e.g., Machine Learning, Data Science, AI, Computer Science"
+                  placeholder="e.g., Communication Networks, Data Science, AI, Computer Science"
                 ></textarea>
               </div>
             </form>
@@ -2193,6 +2241,26 @@
       </div>
     </div>
 
+    <!-- Award Nomination Details Modal -->
+    <div class="modal fade" id="awardNominationDetailsModal" tabindex="-1">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              <i class="fas fa-trophy me-2"></i>Award Nomination Details
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body" id="awardNominationDetailsContent">
+            <!-- Details will be loaded here -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <input
       id="turnitinFileInput"
       type="file"
@@ -2298,6 +2366,7 @@
           analytics: "analyticsSection",
           contacts: "contactsSection",
           "reviewer-expressions": "reviewerExpressionsSection",
+          "award-nominations": "awardNominationsSection",
         };
 
         // Show selected section
@@ -2338,6 +2407,9 @@
             break;
           case "reviewer-expressions":
             loadReviewerExpressions();
+            break;
+          case "award-nominations":
+            loadAwardNominations();
             break;
         }
       }
@@ -5941,6 +6013,180 @@
       $(document).on("click", "#btnExportReviewerCsv", function () {
         const dt = $("#reviewerExpressionsTable").DataTable();
         if (dt) dt.button(0).trigger();
+      });
+
+      // ========= Award Nominations =========
+      async function loadAwardNominations() {
+        try {
+          showLoading();
+          const res = await fetch(`${API_BASE}/awards/`, {
+            headers: getAuthHeaders(),
+          });
+          if (!res.ok) {
+            const text = await res.text().catch(() => "");
+            throw new Error(`HTTP ${res.status} ${text}`);
+          }
+          const json = await res.json();
+          const rows = Array.isArray(json) ? json : json.nominations || json.data || [];
+          currentData.awardNominations = rows;
+          displayAwardNominations(rows);
+        } catch (err) {
+          console.error("Error loading award nominations:", err);
+          showAlert(
+            `Failed to load award nominations. ${err.message || ""}`,
+            "danger",
+          );
+        } finally {
+          hideLoading();
+        }
+      }
+
+      function displayAwardNominations(rows) {
+        document.getElementById("awardNominationsCount").textContent = rows.length;
+
+        if ($.fn.DataTable.isDataTable("#awardNominationsTable")) {
+          $("#awardNominationsTable").DataTable().destroy();
+        }
+
+        $("#awardNominationsTable").DataTable({
+          data: rows,
+          dom: "Bfrtip",
+          buttons: [
+            {
+              extend: "csvHtml5",
+              title: `award-nominations-${new Date().toISOString().slice(0, 10)}`,
+              className: "d-none",
+              exportOptions: {
+                columns: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+              }
+            },
+          ],
+          columns: [
+            { data: "fullName" },
+            { 
+              data: "phone",
+              render: (d) => d ? `<a href="tel:${d}" class="text-decoration-none">${d}</a>` : "-"
+            },
+            { 
+              data: "email",
+              render: (d) => d ? `<a href="mailto:${d}" class="text-decoration-none">${d}</a>` : "-"
+            },
+            { data: "awardCategory" },
+            { data: "designation" },
+            { data: "orgName" },
+            { data: "industry" },
+            { data: "country" },
+            {
+              data: "createdAt",
+              render: function (dt) {
+                return dt ? new Date(dt).toLocaleString() : "";
+              },
+            },
+            {
+              data: null,
+              orderable: false,
+              className: "text-center",
+              render: function (_, __, row) {
+                return `
+          <div class="btn-group">
+            <button class="btn btn-sm btn-outline-info js-view-award" data-id="${row.id}" title="View Details">
+              <i class="fas fa-eye"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-danger js-delete-award" data-id="${row.id}" title="Delete">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>`;
+              },
+            },
+          ],
+          order: [[8, "desc"]], // Submitted
+          responsive: true,
+          pageLength: 25,
+        });
+      }
+
+      $(document).on("click", "#btnExportAwardCsv", function () {
+        const dt = $("#awardNominationsTable").DataTable();
+        if (dt) dt.button(0).trigger();
+      });
+
+      $(document).on("click", ".js-view-award", function (e) {
+        e.preventDefault();
+        const id = this.getAttribute("data-id");
+        const nom = currentData.awardNominations.find(n => n.id === id);
+        if (!nom) return;
+        
+        const detailsHtml = `
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <h6 class="text-primary mb-3"><i class="fas fa-user me-2"></i>Personal Info</h6>
+              <table class="table table-sm border">
+                <tr><th style="width:150px;background:#f8f9fa;">Full Name</th><td>${nom.fullName || '-'}</td></tr>
+                <tr><th style="background:#f8f9fa;">Email</th><td>${nom.email || '-'}</td></tr>
+                <tr><th style="background:#f8f9fa;">Phone</th><td>${nom.phone || '-'}</td></tr>
+                <tr><th style="background:#f8f9fa;">Country</th><td>${nom.country || '-'}</td></tr>
+              </table>
+            </div>
+            <div class="col-md-6">
+              <h6 class="text-primary mb-3"><i class="fas fa-briefcase me-2"></i>Professional Info</h6>
+              <table class="table table-sm border">
+                <tr><th style="width:150px;background:#f8f9fa;">Organization</th><td>${nom.orgName || '-'}</td></tr>
+                <tr><th style="background:#f8f9fa;">Designation</th><td>${nom.designation || '-'}</td></tr>
+                <tr><th style="background:#f8f9fa;">Industry</th><td>${nom.industry || '-'}</td></tr>
+                <tr><th style="background:#f8f9fa;">Award Category</th><td><span class="badge bg-warning text-dark">${nom.awardCategory || '-'}</span></td></tr>
+              </table>
+            </div>
+          </div>
+          
+          <h6 class="text-primary mb-3 mt-4"><i class="fas fa-trophy me-2"></i>Nomination Details</h6>
+          <div class="card mb-3">
+            <div class="card-header bg-light"><strong>Achievements</strong></div>
+            <div class="card-body" style="white-space: pre-line;">${nom.achievements || "N/A"}</div>
+          </div>
+          
+          <div class="card mb-3">
+            <div class="card-header bg-light"><strong>Impact</strong></div>
+            <div class="card-body" style="white-space: pre-line;">${nom.impact || "N/A"}</div>
+          </div>
+          
+          <div class="card mb-3">
+            <div class="card-header bg-light"><strong>Recognitions</strong></div>
+            <div class="card-body" style="white-space: pre-line;">${nom.recognitions || "N/A"}</div>
+          </div>
+          
+          ${nom.supportFileUrl ? `
+            <h6 class="text-primary mb-3 mt-4"><i class="fas fa-paperclip me-2"></i>Attachments</h6>
+            <a href="${nom.supportFileUrl}" class="btn btn-outline-primary" target="_blank">
+              <i class="fas fa-download me-2"></i>View Supporting Document
+            </a>
+          ` : ``}
+        `;
+        
+        document.getElementById("awardNominationDetailsContent").innerHTML = detailsHtml;
+        const modal = new bootstrap.Modal(document.getElementById("awardNominationDetailsModal"));
+        modal.show();
+      });
+
+      $(document).on("click", ".js-delete-award", async function (e) {
+        e.preventDefault();
+        const id = this.getAttribute("data-id");
+        if (!confirm("Delete this award nomination? This cannot be undone.")) return;
+        try {
+          showLoading();
+          const res = await fetch(`${API_BASE}/awards/${id}`, {
+            method: "DELETE",
+            headers: getAuthHeaders(),
+          });
+          const text = await res.text().catch(() => "");
+          if (!res.ok) throw new Error(`HTTP ${res.status} ${text}`);
+          showAlert("Record deleted", "success");
+          await loadAwardNominations();
+        } catch (err) {
+          console.error("Delete failed:", err);
+          showAlert(`Failed to delete. ${err.message || ""}`, "danger");
+        } finally {
+          hideLoading();
+        }
       });
     </script>
     <!-- Delete Admin Modal -->
